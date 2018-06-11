@@ -2,6 +2,38 @@
 features:
   cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
     components:
+      VoiceBookingsCRUD: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: VoiceBookingsCRUD
+          requires-signin: false
+          sdk-generation-stage-name: Development
+        paths:
+          /VoiceBookings: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/VoiceBookings-20180612000126.zip
+            description: 'Handler for calls to resource path : /VoiceBookings/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: ouiWa9m5rhk7lpdd5tizicngySDNmoiHCNjv3OnlfzY=
+            memorySize: '128'
+            modified: '2018-06-11T12:03:08.049+0000'
+            name: VoiceBookings
+            runtime: nodejs6.10
+            timeout: '3'
+            version: 1NlZt.C3iBYibQtL0ZQojy7QjrJnEmmW
+          '/VoiceBookings/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/VoiceBookings-20180612000126.zip
+            description: 'Handler for calls to resource path : /VoiceBookings/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: ouiWa9m5rhk7lpdd5tizicngySDNmoiHCNjv3OnlfzY=
+            memorySize: '128'
+            modified: '2018-06-11T12:03:08.049+0000'
+            name: VoiceBookings
+            runtime: nodejs6.10
+            timeout: '3'
+            version: VEFWI8h5Z8LLDIgi5GtIBcpmJK66uPce
       sampleCloudApi: !com.amazonaws.mobilehub.v0.API 
         attributes:
           name: sampleCloudApi
@@ -9,31 +41,31 @@ features:
           sdk-generation-stage-name: Development
         paths:
           /items: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/sampleLambda-20180611231019.zip
+            codeFilename: uploads/sampleLambda-20180612000126.zip
             description: 'Handler for calls to resource path : /items/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: f3X6r3mQLcdkaiDmBfqsC210FLp28otywr/RBOMrZQ0=
+            hashcode: idxlpMoskH/d8fNfPQ1KDmRzfVEwxUkfhr5FuHR3luI=
             memorySize: '128'
-            modified: '2018-06-11T11:12:01.691+0000'
+            modified: '2018-06-11T12:03:08.953+0000'
             name: sampleLambda
             runtime: nodejs6.10
             timeout: '3'
-            version: eNYZ60LkKoQViFDzz4EFd_zj2R2Jcztf
+            version: jcCa2by.L2Ir9yxJY2DfI7xQTNSwLT_l
           '/items/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/sampleLambda-20180611231019.zip
+            codeFilename: uploads/sampleLambda-20180612000126.zip
             description: 'Handler for calls to resource path : /items/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: f3X6r3mQLcdkaiDmBfqsC210FLp28otywr/RBOMrZQ0=
+            hashcode: idxlpMoskH/d8fNfPQ1KDmRzfVEwxUkfhr5FuHR3luI=
             memorySize: '128'
-            modified: '2018-06-11T11:12:01.691+0000'
+            modified: '2018-06-11T12:03:08.953+0000'
             name: sampleLambda
             runtime: nodejs6.10
             timeout: '3'
-            version: Sn9t7jbmKG31fOMJVtAQSeRjYbfDwFCc
+            version: Xdgd5IzPAV1B3A4XehKTvLHjvsr_v2AQ
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
@@ -46,23 +78,16 @@ features:
         tables:
           - !com.amazonaws.mobilehub.v0.NoSQLTable 
             attributes:
-              email: S
-              personId: S
-              personName: S
-              phone: S
-              teamId: S
-            hashKeyName: teamId
+              Actor: S
+              Bookee: S
+              Date: S
+              ID: S
+              NumScripts: N
+            hashKeyName: ID
             hashKeyType: S
-            indexes:
-              - !com.amazonaws.mobilehub.v0.NoSQLIndex 
-                hashKeyName: teamId
-                hashKeyType: S
-                indexName: personName-index
-                rangeKeyName: personName
-                rangeKeyType: S
-            rangeKeyName: personId
-            rangeKeyType: S
-            tableName: ___DYNAMIC_PREFIX___-AWSMobileTable
+            rangeKeyName: ''
+            rangeKeyType: ''
+            tableName: ___DYNAMIC_PREFIX___-VoiceBookings
             tablePrivacy: public
   mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
     components:
