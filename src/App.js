@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Amplify, { API } from 'aws-amplify';
 import aws_exports from './aws-exports';
+import {Menu, Segment, Item, Icon} from 'semantic-ui-react';
+import MainDash from './screens/MainDash.js';
 
 Amplify.configure(aws_exports);
 
@@ -17,19 +19,20 @@ class App extends Component {
       });
     }
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
+    render() {
+      return (
+        <Segment>
+          <Menu>
+             <Menu.Item name='home'> <Icon name="home"/></Menu.Item>
+             <Menu.Item name='Something'/>
+             <Menu.Item name='AnotherThing' />
+             <Menu.Item name='All the things' />
+           </Menu>
+           <MainDash />
+        </Segment>
+      );
+    }
   }
-}
+
 
 export default App;
