@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+</head>
+<body>
+<script type='text/javascript'
+        src="/aws-amplify-master/packages/amazon-cognito-identity-js/dist/amazon-cognito-identity.js"></script>
+<table>
+    <tr>
+        <td>Old PassWord:</td>
+        <td><input type="text" id="oldpassword" placeholder="Please Enter old PassWord"></td>
+    </tr>
+    <br>
+    <br>
+    <tr>
+        <td>New PassWord:</td>
+        <td><input type="text" id="newpassword" placeholder="Please Enter new PassWord"></td>
+    </tr>
+    <br>
+    <br>
+    <tr><td><div style="width:500px;">
+        <button id="resetbt">Reset your Password</button>
+    </div></td></tr>
+</table>
+<script>
+    var data = {
+        UserPoolId: 'us-east-2_GQB7v47ru',     // Insert your user pool id
+        ClientId: '5qhr2tiv8d5jakh8e9kq72ge2k' // Insert your app client id
+    };
+    var userPool = new AmazonCognitoIdentity.CognitoUserPool(data);
+
+    var cognitoUser = userPool.getCurrentUser();
+
+    if (cognitoUser != null) {
+        cognitoUser.getSession(function (err, session) {
+            if (err) {
+                alert(err);
+                return;
+            }
+            console.log('session validity: ' + session.isValid());
+        });
+    }
+    else {
+        console.log('empty user');
+    }
+
+
+    document.getElementById('resetbt').addEventListener('click', function (){
+        this.cognitoUser.changePassword(document.getElementById('oldpassword').value, document.getElementById('newpassword').value, function(err, result) {
+        if (err) {
+            alert(err);
+            return;
+        }
+        console.log('call result: ' + result);
+    });
+    });
+
+</script>
+</body>
+</html>
