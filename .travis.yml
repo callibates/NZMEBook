@@ -6,9 +6,10 @@ install:
   # Install any dependencies required for building your site here.
   # `awscli` is required for invalidation of CloudFront distributions.
   - pip install awscli
+  - pip install aws
 script:
   # Build your site (e.g., HTML, CSS, JS) here.
-  - ~/.local/bin/aws s3 sync dist s3://nzmetest --region=us-east-1 --delete
+  - ~/.local/bin/aws s3 sync build s3://nzmetest --region=us-east-1 --delete
 deploy:
   # Control deployment by setting a value for `on`. Setting the `branch`
   # option to `master` means Travis will only attempt a deployment on
@@ -24,7 +25,7 @@ deploy:
   # Prevent Travis from deleting your built site so it can be uploaded.
   skip_cleanup: true
   # Path to a directory containing your built site.
-#  local_dir: build
+  local_dir: build
   # Set the Cache-Control header.
   cache_control: "max-age=21600"
 after_deploy:
