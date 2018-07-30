@@ -4,6 +4,7 @@ cache: pip
 install:
   # Install any dependencies required for building your site here.
   # `awscli` is required for invalidation of CloudFront distributions.
+  - pip install --upgrade pip
   - pip install awscli
 script:
   # Build your site (e.g., HTML, CSS, JS) here.
