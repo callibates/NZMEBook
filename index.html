@@ -20,21 +20,21 @@
         Password: <input type="text" id="password" placeholder="Enter password">
         <br>
         <br>
-		email: <input type="text" id="email" placeholder="Enter email...">
+		Email: <input type="text" id="email" placeholder="Enter email...">
         <br>
         <br>
-		Given Name: <input type="text" id="givenname" placeholder="Enter Given Name">
+		Given Name: <input type="text" id="givenname" placeholder="Enter given Name">
         <br>
         <br>
-		FamilyName: <input type="text" id="familyname" placeholder="Enter password">
+		Family Name: <input type="text" id="familyname" placeholder="Enter family name">
         <br>
         <br>
-		Location: <input type="text" id="location" placeholder="Enter Location">
+		Location: <input type="text" id="location" placeholder="Enter location">
         <br>
         <br>
-		Role: <input type="checkbox" name="Administrator" value="Administrator" />Administrator 
+		Role: <input type="checkbox" name="Administrator" value="Administrator" />Administrator
 		<input type="checkbox" name="Copywriter" value="Copywriter" /> Copywriter
-		<input type="checkbox" name="SoundEngineer" value="SoundEngineer" /> SoundEngineer
+		<input type="checkbox" name="SoundEngineer" value="SoundEngineer" /> Sound Engineer
 		<input type="checkbox" name="Guest" value="Guest" /> Guest
         <br>
         <br>
@@ -61,37 +61,37 @@
         Name : 'email',
         Value : emaildata
 		};
-		
+
 		var dataGivenName = {
         Name : 'given_name',
         Value : given_namedata
 		};
-		
+
 		var dataFamilyName = {
         Name : 'family_name',
         Value : family_namedata
 		};
-		
+
 		var dataLocale = {
         Name : 'locale',
         Value : localedata
 		};
-		
+
 		var attributeGivenName = new AmazonCognitoIdentity.CognitoUserAttribute(dataGivenName);
 		var attributeFamilyName = new AmazonCognitoIdentity.CognitoUserAttribute(dataFamilyName);
 		var attributeEmail = new AmazonCognitoIdentity.CognitoUserAttribute(dataEmail);
 		var attributeLocale = new AmazonCognitoIdentity.CognitoUserAttribute(dataLocale);
-		
-		
-		
+
+
+
 		attributeList.push(attributeGivenName);
 		attributeList.push(attributeFamilyName);
 		attributeList.push(attributeEmail);
 		attributeList.push(attributeLocale);
-		
+
 		return attributeList;
 		}
-					
+
         document.getElementById('signupUser').addEventListener('click', function () {
           userPool.signUp(document.getElementById('username').value, document.getElementById('password').value,
             getdata(), null,
