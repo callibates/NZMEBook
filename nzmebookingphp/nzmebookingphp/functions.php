@@ -472,20 +472,6 @@ function count_reservations($user_id)
 	return($count);
 }
 
-function cost_reservations($user_id)
-{
-	$query = mysql_query("SELECT * FROM " . global_mysql_reservations_table . " WHERE reservation_user_id='$user_id'")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
-
-	$cost = 0;
-
-	while($reservation = mysql_fetch_array($query))
-	{
-		$cost =+ $cost + $reservation['reservation_price'];
-	}
-
-	return($cost);
-}
-
 function get_reservation_reminders()
 {
 	$user_id = $_SESSION['user_id'];

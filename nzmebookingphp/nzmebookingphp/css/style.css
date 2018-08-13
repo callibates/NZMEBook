@@ -158,14 +158,6 @@ div#new_user_div div:last-child
 	display: table-cell;
 }
 
-div#user_secret_code_div
-{
-	opacity: 0;
-	padding: 5px;
-	background-color: #ffffaa;
-	font-size: 12px;
-}
-
 div#reservation_div
 {
 	width: 1000px;
@@ -295,7 +287,7 @@ table#reservation_table
 
 table#reservation_table th, table#reservation_table td
 {
-	padding: 5px 10px;
+	padding: 1px 2px;
 	vertical-align: middle;
 	text-align: left;
 }
@@ -393,7 +385,7 @@ input#price_input
 
 input#reservation_today_button
 {
-	visibility: hidden;	
+	visibility: hidden;
 }
 
 /* Headlines */
