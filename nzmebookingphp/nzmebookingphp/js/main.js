@@ -14,7 +14,7 @@ function showlogin()
 
 	$.get('login.php', function(data)
 	{
-		$('#content_div').html(data); 
+		$('#content_div').html(data);
 		div_fadein('#content_div');
 		page_loaded();
 
@@ -37,7 +37,7 @@ function shownew_user()
 	page_load();
 	div_hide('#content_div');
 	$.get('login.php?new_user', function(data) { $('#content_div').html(data); div_fadein('#content_div'); page_loaded(); input_focus('#user_name_input'); });
-	
+
 }
 
 function showforgot_password()
@@ -45,7 +45,7 @@ function showforgot_password()
 	page_load();
 	div_hide('#content_div');
 	$.get('login.php?forgot_password', function(data) { $('#content_div').html(data); div_fadein('#content_div'); page_loaded(); });
-	
+
 }
 
 function showreservations()
@@ -156,7 +156,7 @@ function page_load(page)
 				notify('Loading...', 300);
 			}
 		}, 500);
-	}	
+	}
 	else if(page == 'week')
 	{
 		setTimeout(function()
@@ -265,6 +265,7 @@ function create_user()
 	var user_email = $('#user_email_input').val();
 	var user_password = $('#user_password_input').val();
 	var user_password_confirm = $('#user_password_confirm_input').val();
+	var user_role = $('input:radio[name=user_role_input]:checked').val();
 
 	if($('#user_secret_code_input').length)
 	{
@@ -286,7 +287,7 @@ function create_user()
 	{
 		$('#new_user_message_p').html('<img src="img/loading.gif" alt="Loading"> Creating user...').slideDown('fast');
 
-		$.post('login.php?create_user', { user_name: user_name, user_email: user_email, user_password: user_password, user_secret_code: user_secret_code }, function(data)
+		$.post('login.php?create_user', { user_name: user_name, user_email: user_email, user_password: user_password, user_role: user_role }, function(data)
 		{
 			if(data == 1)
 			{
@@ -327,9 +328,9 @@ function toggle_reservation_time(id, week, day, time, from)
 
 	if(user_name == '')
 	{
-		$(id).html('Wait...'); 
+		$(id).html('Wait...');
 
-		$.post('reservation.php?make_reservation', { week: week, day: day, time: time }, function(data) 
+		$.post('reservation.php?make_reservation', { week: week, day: day, time: time }, function(data)
 		{
 			if(data == 1)
 			{
@@ -338,7 +339,7 @@ function toggle_reservation_time(id, week, day, time, from)
 			else
 			{
 				notify(data, 4);
-				setTimeout(function() { read_reservation(id, week, day, time); }, 2000);			
+				setTimeout(function() { read_reservation(id, week, day, time); }, 2000);
 			}
 		});
 	}
@@ -423,7 +424,7 @@ function read_reservation_details(id, week, day, time)
 					if(data == 0)
 					{
 						$('#reservation_details_div').html('This reservation no longer exists. Wait...');
-						
+
 						setTimeout(function()
 						{
 							if($('#reservation_details_div').is(':visible') && $('#reservation_details_div').html() == 'This reservation no longer exists. Wait...')
@@ -615,7 +616,6 @@ function delete_all(delete_data)
 
 function save_system_configuration()
 {
-	var price = $('#price_input').val();
 
 	$('#system_configuration_message_p').html('<img src="img/loading.gif" alt="Loading"> Saving...');
 	$('#system_configuration_message_p').slideDown('fast');
@@ -692,7 +692,7 @@ function toggle_reservation_reminder()
 			{
 				if($('#users_div').length)
 				{
-					list_users();		
+					list_users();
 				}
 
 				get_reservation_reminders();
@@ -712,6 +712,12 @@ function change_user_details()
 	var user_email = $('#user_email_input').val();
 	var user_password = $('#user_password_input').val();
 	var user_password_confirm = $('#user_password_confirm_input').val();
+	var roles = document.getElementByName('user_role_input');
+	for (var i = 0, length = roles.length; i < length; i++) {
+		if (roles[i].checked) {
+			var user_role = roles[i].val();
+		}
+	}
 
 	if(user_password != user_password_confirm)
 	{
@@ -721,7 +727,7 @@ function change_user_details()
 		input_focus('#user_password_input');
 	}
 	else
-	{	
+	{
 		$('#user_details_message_p').html('<img src="img/loading.gif" alt="Loading"> Saving and refreshing...').slideDown('fast');
 
 		$.post('cp.php?change_user_details', { user_name: user_name, user_email: user_email, user_password: user_password }, function(data)
@@ -848,7 +854,6 @@ $(document).ready( function()
 	$(document).on('submit', '#user_details_form', function() { change_user_details(); return false; });
 
 	// Links
-	$(document).on('click mouseover', '#user_secret_code_a', function() { div_fadein('#user_secret_code_div'); return false; });
 	$(document).on('click', '#previous_week_a', function() { showweek('previous'); return false; });
 	$(document).on('click', '#next_week_a', function() { showweek('next'); return false; });
 

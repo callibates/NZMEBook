@@ -7,7 +7,7 @@ if(check_login() != true) { exit; }
 ?>
 
 <div class="box_div" id="help_div">
-<div class="box_top_div"><a href="#">Start</a> &gt; Help</div>
+<div class="box_top_div"><a href="#">Timetable</a> &gt; Help</div>
 <div class="box_body_div">
 
 <h3>Reservations</h3>

@@ -4,11 +4,7 @@ include_once('main.php');
 
 if(check_login() != true) { exit; }
 
-if($_SESSION['user_is_admin'] == '1' && isset($_GET['list_users']))
-{
-	echo list_users();
-}
-elseif($_SESSION['user_is_admin'] == '1' && isset($_GET['reset_user_password']))
+if($_SESSION['user_is_admin'] == '1' && isset($_GET['reset_user_password']))
 {
 	$user_id = mysql_real_escape_string($_POST['user_id']);
 	echo reset_user_password($user_id);
@@ -58,8 +54,6 @@ else
 ?>
 
 		<h3>User administration</h3>
-
-		<div id="users_div"><?php echo list_users(); ?></div>
 
 		<p class="center_p"><input type="button" class="small_button blue_button" id="reset_user_password_button" value="Reset password"> <input type="button" class="small_button blue_button" id="change_user_permissions_button" value="Change permissions"> <input type="button" class="small_button" id="delete_user_reservations_button" value="Delete Bookings"> <input type="button" class="small_button" id="delete_user_button" value="Delete user"></p>
 		<p class="center_p" id="user_administration_message_p"></p>

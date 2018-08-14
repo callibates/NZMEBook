@@ -175,7 +175,7 @@ function logout()
 	setcookie(global_cookie_prefix . '_user_password', '', time() - 3600);
 }
 
-function create_user($user_name, $user_email, $user_password)
+function create_user($user_name, $user_email, $user_password, $user_role)
 {
 	if(validate_user_name($user_name) != true)
 	{
@@ -201,7 +201,7 @@ function create_user($user_name, $user_email, $user_password)
 	{
 		$query = mysql_query("SELECT * FROM " . global_mysql_users_table . "")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
-		if(mysql_num_rows($query) == 0)
+		if($user_role == 'Admin')
 		{
 			$user_is_admin = '1';
 		}
@@ -210,9 +210,36 @@ function create_user($user_name, $user_email, $user_password)
 			$user_is_admin = '0';
 		}
 
+		if($user_role == 'Sound Engineer')
+		{
+			$user_is_soundengineer = '1';
+		}
+		else
+		{
+			$user_is_soundengineer = '0';
+		}
+
+		if($user_role == 'Copywriter')
+		{
+			$user_is_copywriter = '1';
+		}
+		else
+		{
+			$user_is_copywriter = '0';
+		}
+
+		if($user_role == 'Guest')
+		{
+			$user_is_guest = '1';
+		}
+		else
+		{
+			$user_is_guest = '0';
+		}
+
 		$user_password = encrypt_password($user_password);
 
-		mysql_query("INSERT INTO " . global_mysql_users_table . " (user_is_admin,user_email,user_password,user_name,user_reservation_reminder) VALUES ($user_is_admin,'$user_email','$user_password','$user_name','0')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+		mysql_query("INSERT INTO " . global_mysql_users_table . " (user_is_admin,user_is_soundengineer,user_is_copywriter,user_is_guest,user_email,user_password,user_name,user_role,user_reservation_reminder) VALUES ('$user_is_admin','$user_is_soundengineer','$user_is_copywriter','$user_is_guest','$user_email','$user_password','$user_name','$user_role','0')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
 		$user_password = strip_salt($user_password);
 
@@ -287,21 +314,20 @@ function make_reservation($week, $day, $time)
 	$user_id = $_SESSION['user_id'];
 	$user_email = $_SESSION['user_email'];
 	$user_name = $_SESSION['user_name'];
-	$price = global_price;
 
 	if($week == '0' && $day == '0' && $time == '0')
 	{
-		mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_week,reservation_day,reservation_time,reservation_price,reservation_user_id,reservation_user_email,reservation_user_name) VALUES (now(),'$week','$day','$time','$price','$user_id','$user_email','$user_name')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+		mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name) VALUES (now(),'$week','$day','$time','$user_id','$user_email','$user_name')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
 		return(1);
 	}
-	elseif($week < global_week_number && $_SESSION['user_is_admin'] != '1' || $week == global_week_number && $day < global_day_number && $_SESSION['user_is_admin'] != '1')
+	elseif($week < global_week_number && $_SESSION['user_is_admin'] != '1' || $week == global_week_number && $day < global_day_number + 1 && $_SESSION['user_is_admin'] != '1')
 	{
-		return('You can\'t reserve back in time');
+		return('You can\'t make bookings before today');
 	}
 	elseif($week > global_week_number + global_weeks_forward && $_SESSION['user_is_admin'] != '1')
 	{
-		return('You can only reserve ' . global_weeks_forward . ' weeks forward in time');
+		return('You can only make bookings up to ' . global_weeks_forward . ' weeks in advance');
 	}
 	else
 	{
@@ -311,7 +337,7 @@ function make_reservation($week, $day, $time)
 		{
 			$year = global_year;
 
-			mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_price,reservation_user_id,reservation_user_email,reservation_user_name) VALUES (now(),'$year','$week','$day','$time','$price','$user_id','$user_email','$user_name')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+			mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name) VALUES (now(),'$year','$week','$day','$time','$user_id','$user_email','$user_name')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
 			return(1);
 		}
@@ -351,22 +377,6 @@ function delete_reservation($week, $day, $time)
 }
 
 // Admin control panel
-
-function list_users()
-{
-	$query = mysql_query("SELECT * FROM " . global_mysql_users_table . " ORDER BY user_is_admin DESC, user_name")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
-
-	$users = '<table id="users_table"><tr><th>ID</th><th>Admin</th><th>Name</th><th>Email</th><th>Reminders</th><th>Usage</th><th>Cost</th><th></th></tr>';
-
-	while($user = mysql_fetch_array($query))
-	{
-		$users .= '<tr id="user_tr_' . $user['user_id'] . '"><td><label for="user_radio_' . $user['user_id'] . '">' . $user['user_id'] . '</label></td><td>' . $user['user_is_admin'] . '</td><td><label for="user_radio_' . $user['user_id'] . '">' . $user['user_name'] . '</label></td><td><label for="user_radio_' . $user['user_id'] . '">' . $user['user_email'] . '</label></td><td>' . $user['user_reservation_reminder'] . '</td><td>' . count_reservations($user['user_id']) . '</td><td>' . cost_reservations($user['user_id']) . ' ' . global_currency . '</td><td><input type="radio" name="user_radio" class="user_radio" id="user_radio_' . $user['user_id'] . '" value="' . $user['user_id'] . '"></td></tr>';
-	}
-
-	$users .= '</table>';
-
-	return($users);
-}
 
 function reset_user_password($user_id)
 {

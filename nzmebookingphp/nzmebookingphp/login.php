@@ -18,14 +18,15 @@ elseif(isset($_GET['create_user']))
 	$user_name = mysql_real_escape_string(trim($_POST['user_name']));
 	$user_email = mysql_real_escape_string($_POST['user_email']);
 	$user_password = mysql_real_escape_string($_POST['user_password']);
-	echo create_user($user_name, $user_email, $user_password);
+	$user_role = mysql_real_escape_string($_POST['user_role']);
+	echo create_user($user_name, $user_email, $user_password, $user_role);
 }
 elseif(isset($_GET['new_user']))
 {
 
 ?>
 
-	<div class="box_div" id="login_div"><div class="box_top_div"><a href="#">Start</a> &gt; New user</div><div class="box_body_div">
+	<div class="box_div" id="login_div"><div class="box_top_div"><a href="#">Login Page</a> &gt; New user</div><div class="box_body_div">
 	<div id="new_user_div"><div>
 
 	<form action="." id="new_user_form"><p>
@@ -38,6 +39,11 @@ elseif(isset($_GET['new_user']))
 	<input type="password" id="user_password_input"><br><br>
 	<label for="user_password_confirm_input">Confirm password:</label><br>
 	<input type="password" id="user_password_confirm_input"><br><br>
+	<label for="user_role_input">User Role:</lavel><br>
+	<input type="radio" name="user_role_input" id="user_role_input_admin" value="Admin">Admin<br>
+	<input type="radio" name="user_role_input" id="user_role_input_soundengineer" value="Sound Engineer">Sound Engineer<br>
+	<input type="radio" name="user_role_input" id="user_role_input_copywriter" value="Copywriter">Copywriter<br>
+	<input type="radio" name="user_role_input" id="user_role_input_guest" value="Guest">Guest<br><br>
 
 	<input type="submit" value="Create user">
 
@@ -68,11 +74,11 @@ elseif(isset($_GET['forgot_password']))
 
 ?>
 
-	<div class="box_div" id="login_div"><div class="box_top_div"><a href="#">Start</a> &gt; Forgot password</div><div class="box_body_div">
+	<div class="box_div" id="login_div"><div class="box_top_div"><a href="#">Login Page</a> &gt; Forgot password</div><div class="box_body_div">
 
-	<p>Contact one of the admins below by email and write that you've forgotten your password, and you will get a new one. The password can be changed after logging in.</p>
 
-	<?php echo list_admin_users(); ?>
+
+	<!--<?php echo list_admin_users(); ?>-->
 
 	</div></div>
 
