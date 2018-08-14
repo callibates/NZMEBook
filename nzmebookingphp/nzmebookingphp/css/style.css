@@ -3,9 +3,10 @@
 body
 {
 	margin: 50px 0 50px 0;
-	padding: 0;
+	padding: 40px;
+	background-image: url("bg-dark.jpg");
 	background-color: #f5f5f5;
-	font-family: "trebuchet ms", arial, "liberation sans";
+	font-family: "Graphik Regular", arial, sans-serif;
 	font-size: 14px;
 }
 
@@ -51,14 +52,15 @@ div#header_div
 	top: 0;
 	z-index: 100;
 	width: 100%;
-	height: 30px;
-	background-color: #2d2d2d;
+	height: 62px;
+	background-color: #010101;
 	box-shadow: 0px 2px 10px #2d2d2d;
 	-webkit-box-shadow: 0px 2px 10px #2d2d2d;
 	color: #fff;
-	font-size: 12px;
+	font-size: 25px;
 	overflow: hidden;
 	white-space: nowrap;
+	font-family: "Graphik Regular", arial, sans-serif;
 }
 
 div#header_inner_div
@@ -71,10 +73,12 @@ div#header_inner_div
 div#header_inner_left_div
 {
 	display: table-cell;
-	width: 250px;
+	width: 328px;
 	padding-left: 10px;
-	vertical-align: middle;
-	text-align: left;
+	vertical-align: bottom;
+	text-align: right;
+	font-size: 15px;
+	background-image: url("logo_nzme.png");
 }
 
 div#header_inner_center_div
@@ -87,10 +91,11 @@ div#header_inner_center_div
 div#header_inner_right_div
 {
 	display: table-cell;
-	width: 250px;
-	padding-right: 10px;
+	width: 200px;
+	padding-right: 50px;
 	vertical-align: middle;
 	text-align: right;
+	font-size: 15px;
 }
 
 div#content_div
@@ -108,11 +113,12 @@ div#preload_div
 div.box_div
 {
 	margin: 0 auto;
-	background-color: #4a8cf6;
-	border: 1px solid #4a8cf6;
+	background-color: grey;
+	border: 1px solid black;
 	border-radius: 10px;
 	box-shadow: 2px 2px 10px #2d2d2d;
 	-webkit-box-shadow: 2px 2px 10px #2d2d2d;
+	
 }
 
 div.box_top_div
@@ -120,6 +126,7 @@ div.box_top_div
 	padding: 8px 15px;
 	color: #fff;
 	font-weight: bold;
+	
 }
 
 div.box_body_div
@@ -138,13 +145,15 @@ div#about_div
 
 div#login_div
 {
-	width: 600px;
+	width: 260px;
+	
 }
 
 div#new_user_div
 {
 	display: table;
-	width: 100%;
+	width: 550px;
+
 }
 
 div#new_user_div div:first-child
@@ -214,7 +223,7 @@ div.reservation_time_cell_div
 	height: 40px;
 	vertical-align: middle;
 	text-align: center;
-	font-family: arial, "liberation sans";
+	font-family: "Graphik Regular", arial, sans-serif;
 	font-size: 12px;
 }
 
@@ -377,15 +386,10 @@ input.blue_button
 	background-color: #4a8cf6;
 }
 
-input#price_input
-{
-	width: 20px;
-	text-align: center;
-}
 
 input#reservation_today_button
 {
-	visibility: hidden;
+	visibility: visible;
 }
 
 /* Headlines */
@@ -397,6 +401,7 @@ h1
 	text-align: center;
 	font-size: 24px;
 	font-weight: bold;
+	color: white;
 }
 
 h2
@@ -406,6 +411,7 @@ h2
 	font-size: 14px;
 	font-weight: bold;
 	text-align: center;
+	color: white;
 }
 
 h3
@@ -477,11 +483,13 @@ p#settings_message_p
 ul
 {
 	padding: 0 0 0 30px;
+	color: white;
 }
 
 li
 {
 	padding-bottom: 10px;
+	color: red;
 }
 
 /* Links */
@@ -538,3 +546,4 @@ hr.thick_hr
 	-o-transition: opacity 0.25s ease-in;
 	-ms-transition: opacity 0.25s ease-in;
 }
+

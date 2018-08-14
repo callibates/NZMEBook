@@ -321,7 +321,7 @@ function make_reservation($week, $day, $time)
 
 		return(1);
 	}
-	elseif($week < global_week_number && $_SESSION['user_is_admin'] != '1' || $week == global_week_number && $day < global_day_number + 1 && $_SESSION['user_is_admin'] != '1')
+	elseif($week < global_week_number && $_SESSION['user_is_admin'] != '1' || $week == global_week_number && $day < global_day_number && $_SESSION['user_is_admin'] != '1')
 	{
 		return('You can\'t make bookings before today');
 	}

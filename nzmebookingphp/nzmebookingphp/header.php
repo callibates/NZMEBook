@@ -6,7 +6,7 @@
 
 if(isset($_SESSION['logged_in']))
 {
-	echo ' | <a href="#help">Help</a>';
+	echo '';
 }
 
 ?>
@@ -28,7 +28,7 @@ if(isset($_SESSION['logged_in']))
 
 if(isset($_SESSION['logged_in']))
 {
-	echo '<a href="#cp">Control panel</a> | <a href="#logout">Log out</a>';
+	echo '<a href="#help">Help</a> | <a href="#cp">Control panel</a> | <a href="#logout">Log out</a>';
 }
 else
 {
