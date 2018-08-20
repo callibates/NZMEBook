@@ -76,10 +76,25 @@ elseif(isset($_GET['forgot_password']))
 ?>
 
 	<div class="box_div" id="login_div"><div class="box_top_div"><a href="#">Login Page</a> &gt; Forgot password</div><div class="box_body_div">
+	<form action="." id="user_details_form" autocomplete="off"><p>
 
+	<div id="user_details_div"><div>
+	<label for="user_name_input">Name:</label><br>
+	<input type="text" id="user_name_input"><br><br>
+	<label for="user_email_input">Email:</label><br>
+	<input type="text" id="user_email_input" autocapitalize="off">
+	</div><div>
+	<label for="user_password_input">Password:</label><br>
+	<input type="password" id="user_password_input"><br><br>
+	<label for="user_password_confirm_input">Confirm password:</label><br>
+	<input type="password" id="user_password_confirm_input">
+	</div></div>
 
+	<p><input type="submit" class="small_button blue_button" value="Reset Password"></p>
 
-	<!--<?php echo list_admin_users(); ?>-->
+	</p></form>
+
+	<p id="user_details_message_p"></p>
 
 	</div></div>
 

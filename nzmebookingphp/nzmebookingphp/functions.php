@@ -193,7 +193,7 @@ function create_user($user_name, $user_email, $user_password, $user_role)
 	}
 	elseif(validate_user_password($user_password) != true)
 	{
-		return('<span class="error_span">Password must contain an uppercase letter, a number and be at least 10 characters</span>');
+		return('<span class="error_span">Password must be at least 10 characters and contain an uppercase letter and a number.</span>');
 	}
 	elseif(user_name_exists($user_name) == true)
 	{
@@ -516,7 +516,7 @@ function toggle_reservation_reminder()
 
 function change_user_details($user_name, $user_email, $user_password)
 {
-	$user_id = $_SESSION['user_id'];
+	$user_id = 2;
 
 	if(validate_user_name($user_name) != true)
 	{
@@ -528,15 +528,7 @@ function change_user_details($user_name, $user_email, $user_password)
 	}
 	elseif(validate_user_password($user_password) != true && !empty($user_password))
 	{
-		return('<span class="error_span">Password must contain an uppercase letter, a number and be at least 10 characters</span>');
-	}
-	elseif(user_name_exists($user_name) == true && $user_name != $_SESSION['user_name'])
-	{
-		return('<span class="error_span">Name is already in use. If you have the same name as someone else, use another spelling that identifies you</span>');
-	}
-	elseif(user_email_exists($user_email) == true && $user_email != $_SESSION['user_email'])
-	{
-		return('<span class="error_span">Email is already registered</span>');
+		return('<span class="error_span">Password must be at least 10 characters and contain an uppercase letter and a number.</span>');
 	}
 	else
 	{
@@ -552,9 +544,6 @@ function change_user_details($user_name, $user_email, $user_password)
 		}
 
 		mysql_query("UPDATE " . global_mysql_reservations_table . " SET reservation_user_name='$user_name', reservation_user_email='$user_email' WHERE reservation_user_id='$user_id'")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
-
-		$_SESSION['user_name'] = $user_name;
-		$_SESSION['user_email'] = $user_email;
 
 		$user_password = strip_salt($user_password);
 

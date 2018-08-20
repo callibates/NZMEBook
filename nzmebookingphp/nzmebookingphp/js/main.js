@@ -730,7 +730,7 @@ function change_user_details()
 	{
 		$('#user_details_message_p').html('<img src="img/loading.gif" alt="Loading"> Saving and refreshing...').slideDown('fast');
 
-		$.post('cp.php?change_user_details', { user_name: user_name, user_email: user_email, user_password: user_password }, function(data)
+		$.post('login.php?change_user_details', { user_name: user_name, user_email: user_email, user_password: user_password }, function(data)
 		{
 			if(data == 1)
 			{
