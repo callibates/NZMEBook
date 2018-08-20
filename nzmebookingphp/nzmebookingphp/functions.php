@@ -64,9 +64,15 @@ function validate_user_email($user_email)
 
 function validate_user_password($user_password)
 {
-	if(strlen($user_password) > 3 && trim($user_password) != '')
+	if(strlen($user_password) > 9 && trim($user_password) != '')
 	{
-		return(true);
+		if(strcspn($user_password, '0123456789') != strlen($user_password))
+		{
+			if(strcspn($user_password, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ') != strlen($user_password))
+			{
+					return(true);
+			}
+		}
 	}
 }
 
@@ -187,7 +193,7 @@ function create_user($user_name, $user_email, $user_password, $user_role)
 	}
 	elseif(validate_user_password($user_password) != true)
 	{
-		return('<span class="error_span">Password must be at least 4 characters</span>');
+		return('<span class="error_span">Password must contain an uppercase letter, a number and be at least 10 characters</span>');
 	}
 	elseif(user_name_exists($user_name) == true)
 	{
@@ -522,7 +528,7 @@ function change_user_details($user_name, $user_email, $user_password)
 	}
 	elseif(validate_user_password($user_password) != true && !empty($user_password))
 	{
-		return('<span class="error_span">Password must be at least 4 characters</span>');
+		return('<span class="error_span">Password must contain an uppercase letter, a number and be at least 10 characters</span>');
 	}
 	elseif(user_name_exists($user_name) == true && $user_name != $_SESSION['user_name'])
 	{

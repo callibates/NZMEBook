@@ -56,6 +56,7 @@ elseif(isset($_GET['new_user']))
 	<li>With just a click you can make your reservation</li>
 	<li>Your usage is stored automatically</li>
 	<li>Your password is encrypted and can't be read</li>
+	<li>Your password must contain one uppercase letter, one number and be at least 10 characters in length</li>
 	</ul>
 
 	<script type="text/javascript">$('#email_span').html('<a href="mailto:'+$.base64.decode('<?php echo base64_encode(global_webmaster_email); ?>')+'">'+$.base64.decode('<?php echo base64_encode(global_webmaster_email); ?>')+'</a>');</script>
