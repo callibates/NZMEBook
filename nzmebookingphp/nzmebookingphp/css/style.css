@@ -118,7 +118,7 @@ div.box_div
 	border-radius: 10px;
 	box-shadow: 2px 2px 10px #2d2d2d;
 	-webkit-box-shadow: 2px 2px 10px #2d2d2d;
-	
+
 }
 
 div.box_top_div
@@ -126,7 +126,7 @@ div.box_top_div
 	padding: 8px 15px;
 	color: #fff;
 	font-weight: bold;
-	
+
 }
 
 div.box_body_div
@@ -145,8 +145,8 @@ div#about_div
 
 div#login_div
 {
-	width: 260px;
-	
+	width: 600px;
+
 }
 
 div#new_user_div
@@ -546,4 +546,3 @@ hr.thick_hr
 	-o-transition: opacity 0.25s ease-in;
 	-ms-transition: opacity 0.25s ease-in;
 }
-
