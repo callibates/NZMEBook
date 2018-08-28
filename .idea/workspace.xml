@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1967e194-fddf-48c9-8530-69387b187f05" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/css/style.css" afterPath="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/index.php" afterPath="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/index.php" />
+      <change beforePath="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/js/main.js" afterPath="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/js/main.js" />
+      <change beforePath="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/login.php" afterPath="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/login.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-71">
+              <caret line="58" column="97" lean-forward="false" selection-start-line="58" selection-start-column="97" selection-end-line="58" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-7631">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1535424267377" expanded="true" signature="84:98" ph="SELECT * FRO... ${global_mysql_configuration_table}" />
+                <marker date="1535424267377" expanded="true" signature="1730:1805" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1535424267377" expanded="true" signature="2033:2110" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1535424267377" expanded="true" signature="2820:3005" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1535424267377" expanded="true" signature="3998:4069" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1535424267377" expanded="true" signature="5724:5771" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1535424267377" expanded="true" signature="6393:6730" ph="INSERT INTO ${global_mysql_users_table}... " />
+                <marker date="1535424267377" expanded="true" signature="7205:7294" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1535424267377" expanded="true" signature="8313:8453" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1535424267377" expanded="true" signature="8731:8871" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1535424267377" expanded="true" signature="9459:9725" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+                <marker date="1535424267377" expanded="true" signature="10300:10440" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1535424267377" expanded="true" signature="10624:10915" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+                <marker date="1535424267377" expanded="true" signature="11597:11737" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1535424267377" expanded="true" signature="11996:12134" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1535424267377" expanded="true" signature="13637:13725" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1535424267377" expanded="true" signature="13880:13949" ph="DELETE FROM ${global_mysql_users_table}... " />
+                <marker date="1535424267377" expanded="true" signature="14070:14158" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1535424267377" expanded="true" signature="14398:14487" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1535424267377" expanded="true" signature="14639:14709" ph="DELETE FROM ${global_mysql_users_table}... " />
+                <marker date="1535424267377" expanded="true" signature="14829:14918" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1535424267377" expanded="true" signature="15075:15120" ph="DELETE FROM ${global_mysql_users_table}... " />
+                <marker date="1535424267377" expanded="true" signature="15239:15291" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1535424267377" expanded="true" signature="16284:16374" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1535424267377" expanded="true" signature="16629:16700" ph="SELECT * FRO... ${global_mysql_users_table}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="40" column="68" lean-forward="true" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="406">
+              <caret line="50" column="68" lean-forward="false" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popupbook.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/popupbook.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-314">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reservation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/reservation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-399">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1535424267385" expanded="true" signature="2327:2331" ph="&lt;" />
+                <marker date="1535424267385" expanded="true" signature="2556:2560" ph="&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="940" column="0" lean-forward="true" selection-start-line="940" selection-start-column="0" selection-end-line="940" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="568" column="20" lean-forward="true" selection-start-line="568" selection-start-column="20" selection-end-line="568" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="popupform.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/popupform.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>showreservations</find>
+      <find>toggle</find>
+      <find>toggle_reser</find>
+      <find>id</find>
+      <find>reservation</find>
+      <find>openForm</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/login.php" />
+        <option value="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/css/style.css" />
+        <option value="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/js/main.js" />
+        <option value="$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="NZMEBook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NZMEBook" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NZMEBook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NZMEBook" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nzmebookingphp" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NZMEBook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NZMEBook" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nzmebookingphp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nzmebookingphp" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NZMEBook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NZMEBook" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nzmebookingphp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nzmebookingphp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="NZMEBook" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NZMEBook" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nzmebookingphp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nzmebookingphp" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1967e194-fddf-48c9-8530-69387b187f05" name="Default" comment="" />
+      <created>1535424716168</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535424716168</updated>
+      <workItem from="1535424720891" duration="3921000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3921000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="22" width="1440" height="796" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/cp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-720">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7631">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1535424267377" expanded="true" signature="84:98" ph="SELECT * FRO... ${global_mysql_configuration_table}" />
+            <marker date="1535424267377" expanded="true" signature="1730:1805" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1535424267377" expanded="true" signature="2033:2110" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1535424267377" expanded="true" signature="2820:3005" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1535424267377" expanded="true" signature="3998:4069" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1535424267377" expanded="true" signature="5724:5771" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1535424267377" expanded="true" signature="6393:6730" ph="INSERT INTO ${global_mysql_users_table}... " />
+            <marker date="1535424267377" expanded="true" signature="7205:7294" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1535424267377" expanded="true" signature="8313:8453" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1535424267377" expanded="true" signature="8731:8871" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1535424267377" expanded="true" signature="9459:9725" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+            <marker date="1535424267377" expanded="true" signature="10300:10440" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1535424267377" expanded="true" signature="10624:10915" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+            <marker date="1535424267377" expanded="true" signature="11597:11737" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1535424267377" expanded="true" signature="11996:12134" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1535424267377" expanded="true" signature="13637:13725" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1535424267377" expanded="true" signature="13880:13949" ph="DELETE FROM ${global_mysql_users_table}... " />
+            <marker date="1535424267377" expanded="true" signature="14070:14158" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1535424267377" expanded="true" signature="14398:14487" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1535424267377" expanded="true" signature="14639:14709" ph="DELETE FROM ${global_mysql_users_table}... " />
+            <marker date="1535424267377" expanded="true" signature="14829:14918" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1535424267377" expanded="true" signature="15075:15120" ph="DELETE FROM ${global_mysql_users_table}... " />
+            <marker date="1535424267377" expanded="true" signature="15239:15291" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1535424267377" expanded="true" signature="16284:16374" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1535424267377" expanded="true" signature="16629:16700" ph="SELECT * FRO... ${global_mysql_users_table}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/reservation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1535424267385" expanded="true" signature="2327:2331" ph="&lt;" />
+            <marker date="1535424267385" expanded="true" signature="2556:2560" ph="&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71">
+          <caret line="58" column="97" lean-forward="false" selection-start-line="58" selection-start-column="97" selection-end-line="58" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/popupbook.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-314">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="40" column="68" lean-forward="true" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="568" column="20" lean-forward="true" selection-start-line="568" selection-start-column="20" selection-end-line="568" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/popupform.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="50" column="68" lean-forward="false" selection-start-line="50" selection-start-column="68" selection-end-line="50" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/nzmebookingphp/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="940" column="0" lean-forward="true" selection-start-line="940" selection-start-column="0" selection-end-line="940" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

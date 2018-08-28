@@ -39,7 +39,7 @@ elseif(isset($_GET['new_user']))
 	<input type="password" id="user_password_input"><br><br>
 	<label for="user_password_confirm_input">Confirm password:</label><br>
 	<input type="password" id="user_password_confirm_input"><br><br>
-	<label for="user_role_input">User Role:</lavel><br>
+	<label for="user_role_input">User Role:</label><br>
 	<input type="radio" name="user_role_input" id="user_role_input_admin" value="Admin">Admin<br>
 	<input type="radio" name="user_role_input" id="user_role_input_soundengineer" value="Sound Engineer">Sound Engineer<br>
 	<input type="radio" name="user_role_input" id="user_role_input_copywriter" value="Copywriter">Copywriter<br>

@@ -862,8 +862,7 @@ $(document).ready( function()
 
 	$(document).on('click', '.reservation_time_cell_div', function()
 	{
-		var array = this.id.split(':');
-		toggle_reservation_time(this, array[1], array[2], array[3], array[0]);
+        openForm();
 	});
 
 	$(document).on('mousemove', '.reservation_time_cell_div', function()
@@ -924,6 +923,20 @@ function hash()
 			window.location.replace('.');
 		}
 	}
+}
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+function submitForm(){
+
+	var numScripts = document.getElementById("nmscr").value;
+    var array = this.id.split(':');
+    toggle_reservation_time(this, array[1], array[2], array[3], array[0]);
+
+}
+
+function closeForm() {
+    $(document).getElementById("myForm").style.display = "none";
 }
 
 // Window load

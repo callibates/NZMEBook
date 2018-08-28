@@ -37,7 +37,23 @@
 <div id="preload_div">
 <img src="img/loading.gif" alt="Loading">
 </div>
+<div class="form-popup" id="myForm">
+    <form class="form-container">
+        <h1>Login</h1>
 
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email">
+
+        <label for="usrnm"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="usrnm" id="usrnm">
+
+        <label for="nmscr"><b># Scripts</b></label>
+        <input type="number" placeholder="0" name="nmscr" id="nmscr">
+
+        <button type="submit" class="btn" onclick="submitForm()">Make Booking</button>
+        <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+</div>
 </body>
 
 </html>
