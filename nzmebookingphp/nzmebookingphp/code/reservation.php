@@ -9,6 +9,8 @@ if(isset($_GET['make_reservation']))
 	$week = mysql_real_escape_string($_POST['week']);
 	$day = mysql_real_escape_string($_POST['day']);
 	$time = mysql_real_escape_string($_POST['time']);
+	$loc = mysql_real_escape_string($_POST['loc']);
+	$stu = mysql_real_escape_string($_POST['stu']);
 	echo make_reservation($week, $day, $time);
 }
 elseif(isset($_GET['delete_reservation']))
@@ -74,7 +76,7 @@ elseif(isset($_GET['week']))
 		{
 			$i++;
 			$rtime = str_ireplace(":","",$time);
-			echo '<td><div class="reservation_time_div"><div class="reservation_time_cell_div" id="div:' . $week . ':' . $i . ':' . $time . '" onclick="void(0)">' . read_reservation($week, $i, $rtime, $location, $studio) . '</div></div></td>';
+			echo '<td><div class="reservation_time_div"><div class="reservation_time_cell_div" id="div:' . $week . ':' . $i . ':' . $rtime . '" onclick="void(0)">' . read_reservation($week, $i, $rtime, $location, $studio) . '</div></div></td>';
 		}
 
 		echo '</tr>';

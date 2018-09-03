@@ -38,19 +38,47 @@
 </div>
 <div class="form-popup" id="myForm">
     <form class="form-container">
-        <h1>Login</h1>
-
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" name="email" id="email">
+        <h1>Make A Booking</h1>
 
         <label for="usrnm"><b>Username</b></label>
         <input type="text" placeholder="Enter Username" name="usrnm" id="usrnm">
 
+        <input type="hidden" name="d" id="d">
+
+        <input type="hidden" name="w" id="w">
+
+        <input type="hidden" name="t" id="t">
+
+        <input type="hidden" name="f" id="f">
+
+        <input type="hidden" name="oid" id="oid">
+
         <label for="nmscr"><b># Scripts</b></label>
         <input type="number" placeholder="0" name="nmscr" id="nmscr">
 
-        <button type="submit" class="btn" onclick="submitForm()">Make Booking</button>
+        <button type="submit" class="btn" >Make Booking</button>
         <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+</div>
+<div class="form-popup" id="myForm0">
+    <form class="form-container">
+        <h1>What Kind of Booking?</h1>
+
+        <input type="hidden" name="d" id="d">
+
+        <input type="hidden" name="w" id="w">
+
+        <input type="hidden" name="t" id="t">
+
+        <input type="hidden" name="f" id="f">
+
+        <input type="hidden" name="oid" id="oid">
+
+
+        <button type="button" class="client" >Client</button>
+        <button type="button" class="client" >Studio</button>
+        <button type="submit" class="client" >Voice Actor</button>
+        <button type="submit" class="btn cancel" onclick="closeForm()">Cancel</button>
     </form>
 </div>
 </body>

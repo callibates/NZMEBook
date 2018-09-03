@@ -343,7 +343,7 @@ function make_reservation($week, $day, $time)
 		{
 			$year = global_year;
 
-			mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name) VALUES (now(),'$year','$week','$day','$time','$user_id','$user_email','$user_name')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+			mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio) VALUES (now(),'$year','$week','$day','$time','$user_id','$user_email','$user_name', 'Auckland', '1')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
 			return(1);
 		}
@@ -352,6 +352,44 @@ function make_reservation($week, $day, $time)
 			return('Someone else just reserved this time');
 		}
 	}
+}
+function make_reservation2($week, $day, $time, $loc, $stu)
+{
+    $user_id = $_SESSION['user_id'];
+    $user_email = $_SESSION['user_email'];
+    $user_name = $_SESSION['user_name'];
+
+    if($week == '0' && $day == '0' && $time == '0')
+    {
+        mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name) VALUES (now(),'$week','$day','$time','$user_id','$user_email','$user_name')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+
+        return(1);
+    }
+	elseif($week < global_week_number && $_SESSION['user_is_admin'] != '1' || $week == global_week_number && $day < global_day_number && $_SESSION['user_is_admin'] != '1')
+    {
+        return('You can\'t make bookings before today');
+    }
+	elseif($week > global_week_number + global_weeks_forward && $_SESSION['user_is_admin'] != '1')
+    {
+        return('You can only make bookings up to ' . global_weeks_forward . ' weeks in advance');
+    }
+    else
+    {
+        $query = mysql_query("SELECT * FROM " . global_mysql_reservations_table . " WHERE reservation_week='$week' AND reservation_day='$day' AND reservation_time='$time' AND reservation_location = $loc")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+
+        if(mysql_num_rows($query) < 1)
+        {
+            $year = global_year;
+
+            mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio) VALUES (now(),'$year','$week','$day','$time','$user_id','$user_email','$user_name', 'Auckland', '1')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+
+            return(1);
+        }
+        else
+        {
+            return('Someone else just reserved this time');
+        }
+    }
 }
 
 function delete_reservation($week, $day, $time)

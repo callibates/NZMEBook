@@ -414,7 +414,7 @@ function create_user()
 
 // Reservation
 
-function toggle_reservation_time(id, week, day, time, from)
+function toggle_reservation_time(id, week, day, time, from, set)
 {
 	if(session_user_is_admin == '1')
 	{
@@ -429,12 +429,16 @@ function toggle_reservation_time(id, week, day, time, from)
 	}
 
 	var user_name = $(id).html();
+	if(set == true){
+		user_name = '';
+	}
 
 	if(user_name == '')
 	{
 		$(id).html('Wait...');
-
-		$.post('reservation.php?make_reservation', { week: week, day: day, time: time }, function(data)
+        var obj = document.getElementById("location").value;
+        var obj2 = document.getElementById("studio").value;
+		$.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: obj, stu: obj2 }, function(data)
 		{
 			if(data == 1)
 			{
@@ -496,6 +500,91 @@ function toggle_reservation_time(id, week, day, time, from)
 		}
 	}
 }
+function toggle_reservation_time(id, week, day, time, from, set, loc, stu)
+{
+    if(session_user_is_admin == '1')
+    {
+        if(week < global_week_number || week == global_week_number && day < global_day_number)
+        {
+            notify('You are reserving back in time. You can do that because you\'re an admin', 4);
+        }
+        else if(week > global_week_number + global_weeks_forward)
+        {
+            notify('You are reserving more than '+global_weeks_forward+' weeks forward in time. You can do that because you\'re an admin', 4);
+        }
+    }
+
+    var user_name = $(id).html();
+    if(set == true){
+        user_name = '';
+    }
+
+    if(user_name == '')
+    {
+        $(id).html('Wait...');
+
+        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu }, function(data)
+        {
+            if(data == 1)
+            {
+                setTimeout(function() { read_reservation(id, week, day, time); }, 1000);
+            }
+            else
+            {
+                notify(data, 4);
+                setTimeout(function() { read_reservation(id, week, day, time); }, 2000);
+            }
+        });
+    }
+    else
+    {
+        if(offclick_event == 'mouseup' || from == 'details')
+        {
+            if(user_name == 'Wait...')
+            {
+                notify('One click is enough', 4);
+            }
+            else if(user_name == session_user_name || session_user_is_admin == '1')
+            {
+                if(user_name != session_user_name && session_user_is_admin == '1')
+                {
+                    var delete_confirm = confirm('This is not your reservation, but because you\'re an admin you can remove other users\' reservations. Are you sure you want to do this?');
+                }
+                else
+                {
+                    var delete_confirm = true;
+                }
+
+                if(delete_confirm)
+                {
+                    $(id).html('Wait...');
+
+                    $.post('reservation.php?delete_reservation', { week: week, day: day, time: time }, function(data)
+                    {
+                        if(data == 1)
+                        {
+                            setTimeout(function() { read_reservation(id, week, day, time); }, 1000);
+                        }
+                        else
+                        {
+                            notify(data, 4);
+                            setTimeout(function() { read_reservation(id, week, day, time); }, 2000);
+                        }
+                    });
+                }
+            }
+            else
+            {
+                notify('You can\'t remove other users\' reservations', 2);
+            }
+
+            if($('#reservation_details_div').is(':visible'))
+            {
+                read_reservation_details();
+            }
+        }
+    }
+}
 
 function read_reservation(id, week, day, time, location)
 {
@@ -546,7 +635,7 @@ function read_reservation_details(id, week, day, time)
 						{
 							if($(reservation_details_id).html() == session_user_name || session_user_is_admin == '1')
 							{
-								var delete_link_html = '<a href="." onclick="toggle_reservation_time(reservation_details_id, reservation_details_week, reservation_details_day, reservation_details_time, \'details\'); return false">Delete</a> | ';
+								var delete_link_html = '<a href="." onclick="toggle_reservation_time(reservation_details_id, reservation_details_week, reservation_details_day, reservation_details_time, \'details\', false); return false">Delete</a> | ';
 							}
 							else
 							{
@@ -964,11 +1053,22 @@ $(document).ready( function()
 	// Divisions
 	$(document).on('mouseout', '.reservation_time_cell_div', function() { read_reservation_details(); });
 
-	$(document).on('click', '.reservation_time_cell_div', function()
-	{
-        openForm();
-	});
+    $(document).on('click', '.reservation_time_cell_div', function()
+    {
+    	document.getElementById('usrnm').value = session_user_name;
+        var array = this.id.split(':'); //make all the fields into the form and have them passed in on click?
+		document.getElementById('d').value = array[2];
+		document.getElementById('t').value = array[3];
+		document.getElementById('w').value = array[1];
+		document.getElementById('f').value = array[0];
+		document.getElementById('oid').value = this.id;
 
+        openForm();
+    });
+	$(document).on('click', '.btn', function(){
+		var array = document.getElementById('oid').value.split(':');
+		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true);
+    });
 	$(document).on('mousemove', '.reservation_time_cell_div', function()
 	{
 		var array = this.id.split(':');
@@ -1031,13 +1131,8 @@ function hash()
 function openForm() {
     document.getElementById("myForm").style.display = "block";
 }
-function submitForm(){
 
-	var numScripts = document.getElementById("nmscr").value;
-    var array = this.id.split(':');
-    toggle_reservation_time(this, array[1], array[2], array[3], array[0]);
 
-}
 
 function closeForm() {
     $(document).getElementById("myForm").style.display = "none";
