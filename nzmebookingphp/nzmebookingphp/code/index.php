@@ -53,8 +53,19 @@
 
         <input type="hidden" name="oid" id="oid">
 
-        <label for="nmscr"><b># Scripts</b></label>
-        <input type="number" placeholder="0" name="nmscr" id="nmscr">
+        <label for="loc"><b>Location</b></label>
+        <select name="loc" id="loc">
+            <option value="Auckland" selected="selected">Auckland</option>
+            <option value="Christchurch">Christchurch</option>
+            <option value="Wellington">Wellington</option>
+        </select>
+
+        <label for="stu"><b>Studio</b></label>
+        <select name="stu" id="stu">
+            <option value="1" selected="selected">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
 
         <button type="submit" class="btn" >Make Booking</button>
         <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>

@@ -436,8 +436,8 @@ function toggle_reservation_time(id, week, day, time, from, set)
 	if(user_name == '')
 	{
 		$(id).html('Wait...');
-        var obj = document.getElementById("location").value;
-        var obj2 = document.getElementById("studio").value;
+        var obj = document.getElementById("loc").value;
+        var obj2 = document.getElementById("stu").value;
 		$.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: obj, stu: obj2 }, function(data)
 		{
 			if(data == 1)

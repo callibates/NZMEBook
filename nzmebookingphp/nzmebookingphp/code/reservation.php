@@ -11,7 +11,7 @@ if(isset($_GET['make_reservation']))
 	$time = mysql_real_escape_string($_POST['time']);
 	$loc = mysql_real_escape_string($_POST['loc']);
 	$stu = mysql_real_escape_string($_POST['stu']);
-	echo make_reservation($week, $day, $time);
+	echo make_reservation2($week, $day, $time, $loc, $stu);
 }
 elseif(isset($_GET['delete_reservation']))
 {
