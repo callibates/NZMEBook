@@ -25,6 +25,9 @@ echo 'global_weeks_forward = ' . global_weeks_forward . ';';
 echo 'global_year = ' . global_year . ';';
 echo 'global_week_number = ' . global_week_number . ';';
 echo 'global_day_number = ' . global_day_number . ';';
+echo 'global_auckland = \'' . global_auckland . '\';';
+echo 'global_wellington = \'' . global_wellington . '\';';
+echo 'global_christchurch = \'' . global_christchurch . '\';';
 
 // Login
 

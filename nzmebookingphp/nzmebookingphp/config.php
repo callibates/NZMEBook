@@ -4,9 +4,9 @@
 
 // MySQL details
 define('global_mysql_server', 'cmslamp14.aut.ac.nz');
-define('global_mysql_user', 'vxs8308');
-define('global_mysql_password', 'TinaTobyTroyMax20');
-define('global_mysql_database', 'vxs8308');
+define('global_mysql_user', 'gwh3504');
+define('global_mysql_password', 'liamlinhaO130');
+define('global_mysql_database', 'gwh3504');
 
 // Salt for password encryption. Changing it is recommended. Use 9 random characters
 // This MUST be 9 characters, and must NOT be changed after users have been created
@@ -43,8 +43,11 @@ define('global_url', 'http://your.server/phpmyreservation/');
 // How many weeks forward in time to allow reservations
 define('global_weeks_forward', '2');
 
+define('global_auckland', 'Auckland');
+define('global_wellington', 'Wellington');
+define('global_christchurch', 'Christchurch');
+
 // Possible reservation times. Use the same syntax as below (TimeFrom-TimeTo)
 $global_times = array('7:00-7:30', '7:30-8:00', '8:30-9:00', '9:00-9:30', '9:30-10:00', '10:30-11:00', '11:30-12:00', '12:00-12:30', '12:30-1:00', '1:00-1:30', '1:30-2:00', '2:00-2:30', '2:30-3:00','3:00-3:30','3:30-4:00','4:00-4:30','4:30-5:00','5:00-5:30','5:30-6:00','6:00-6:30');
 $global_times[] = '6:30-7:00';
-
 ?>

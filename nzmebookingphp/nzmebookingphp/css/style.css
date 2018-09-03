@@ -220,7 +220,7 @@ div.reservation_time_cell_div
 {
 	display: table-cell;
 	width: 100%;
-	height: 40px;
+	height: 35px;
 	vertical-align: middle;
 	text-align: center;
 	font-family: "Graphik Regular", arial, sans-serif;
@@ -498,6 +498,10 @@ a
 {
 	color: #4a8cf6;
 }
+b
+{
+	color: white;
+}
 
 div.box_top_div a
 {
@@ -577,7 +581,7 @@ hr.thick_hr
 .form-container {
 	max-width: 300px;
 	padding: 100px;
-	background-color: white;
+	background-color: black;
 }
 
 /* Full-width input fields */

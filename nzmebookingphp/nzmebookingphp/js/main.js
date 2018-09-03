@@ -7,6 +7,26 @@ function showabout()
 	$.get('about.php', function(data) { $('#content_div').html(data); div_fadein('#content_div'); page_loaded('about'); });
 }
 
+function regionreservations()
+{
+	var obj = document.getElementById("location").value;
+	var obj2 = document.getElementById("studio").value;
+	console.log(obj);
+	console.log(obj2);
+	if(obj == 'Wellington')
+	{
+		showWellingtonreservations(obj2);
+	}
+	else if(obj == 'Auckland')
+	{
+		showAucklandreservations(obj2);
+	}
+	else if(obj == 'Christchurch')
+	{
+		showchristchurchreservations(obj2)
+	}
+}
+
 function showlogin()
 {
 	page_load();
@@ -48,8 +68,59 @@ function showforgot_password()
 
 }
 
-function showreservations()
+function showreservations(studionum)
 {
+	var studio = studionum;
+	if(studio == null)
+	{
+		studio = 1;
+	}
+	page_load('reservation');
+	div_hide('#content_div');
+	
+	$.get('reservation.php', function(data)
+	{
+		$('#content_div').html(data);
+		div_fadein('#content_div');
+		console.log(studio);
+		$.get("reservation.php", { week : global_week_number, location : global_auckland, studio : studio}, function(data)
+		{
+			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
+			page_loaded();
+		});
+	});
+
+}
+
+function showAucklandreservations(studionum)
+{
+	var studio = studionum;
+	page_load('reservation');
+	div_hide('#content_div');
+	
+	$.get('reservation.php', function(data)
+	{
+		$('#content_div').html(data);
+		div_fadein('#content_div');
+		console.log(studio);
+		$.get("reservation.php", { week : global_week_number, location : global_auckland, studio : studio}, function(data)
+		{
+			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
+			page_loaded();
+		});
+	});
+
+	var obj = document.getElementById("location");
+	obj.value = "Auckland";
+
+	var obj2 = document.getElementById("studio");
+	obj2.value = studio;
+
+}
+
+function showWellingtonreservations(studionum)
+{
+	var studio = studionum;
 	page_load('reservation');
 	div_hide('#content_div');
 
@@ -57,12 +128,45 @@ function showreservations()
 	{
 		$('#content_div').html(data);
 		div_fadein('#content_div');
-
-		$.get('reservation.php?week='+global_week_number, function(data)
+		//console.log('global auckland'+ global_auckland);
+		$.get("reservation.php", { week : global_week_number, location : global_wellington, studio : studio}, function(data)
 		{
 			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
 			page_loaded();
 		});
+		
+		var obj = document.getElementById("location");
+		obj.value = "Wellington";
+
+		var obj2 = document.getElementById("studio");
+		obj2.value = studio;
+		
+	});
+}
+
+function showchristchurchreservations(studionum)
+{
+	var studio = studionum;
+	page_load('reservation');
+	div_hide('#content_div');
+
+	$.get('reservation.php', function(data)
+	{
+		$('#content_div').html(data);
+		div_fadein('#content_div');
+		//console.log('global auckland'+ global_auckland);
+		$.get("reservation.php", { week : global_week_number, location : global_christchurch, studio : studio}, function(data)
+		{
+			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
+			page_loaded();
+		});
+		
+		var obj = document.getElementById("location");
+		obj.value = "Christchurch";
+
+		var obj2 = document.getElementById("studio");
+		obj2.value = studio;
+		
 	});
 }
 
@@ -393,9 +497,9 @@ function toggle_reservation_time(id, week, day, time, from)
 	}
 }
 
-function read_reservation(id, week, day, time)
+function read_reservation(id, week, day, time, location)
 {
-	$.post('reservation.php?read_reservation', { week: week, day: day, time: time }, function(data) { $(id).html(data); });
+	$.post('reservation.php?read_reservation', { week: week, day: day, time: time , location: location}, function(data) { $(id).html(data); });
 }
 
 function read_reservation_details(id, week, day, time)

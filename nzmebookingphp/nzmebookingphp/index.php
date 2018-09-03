@@ -29,7 +29,6 @@
 
 <div id="header_div"><?php include('header.php'); ?></div>
 
-<h1><?php echo global_title; ?></h1>
 <h2><?php echo global_organization; ?></h2>
 
 <div id="content_div"></div>
