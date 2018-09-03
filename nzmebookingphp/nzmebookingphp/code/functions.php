@@ -337,13 +337,13 @@ function make_reservation($week, $day, $time)
 	}
 	else
 	{
-		$query = mysql_query("SELECT * FROM " . global_mysql_reservations_table . " WHERE reservation_week='$week' AND reservation_day='$day' AND reservation_time='$time' AND reservation_location = 'Auckland'")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+		$query = mysql_query("SELECT * FROM " . global_mysql_reservations_table . " WHERE reservation_week='$week' AND reservation_day='$day' AND reservation_time='$time'")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
 		if(mysql_num_rows($query) < 1)
 		{
 			$year = global_year;
 
-			mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio) VALUES (now(),'$year','$week','$day','$time','$user_id','$user_email','$user_name', 'Auckland', '1')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+			mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio) VALUES (now(),'$year','$week','$day','$time','$user_id','$user_email','$user_name', 'Christchurch', '1')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
 			return(1);
 		}
@@ -381,7 +381,7 @@ function make_reservation2($week, $day, $time, $loc, $stu)
         {
             $year = global_year;
 
-            mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio) VALUES (now(),'$year','$week','$day','$time','$user_id','$user_email','$user_name', 'Auckland', '1')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+            mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio) VALUES (now(),'$year','$week','$day','$time','$user_id','$user_email','$user_name', 'Christchurch', '1')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
             return(1);
         }

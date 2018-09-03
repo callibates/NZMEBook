@@ -37,7 +37,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nzmebookingphp/code/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
+            <state relative-caret-position="825">
               <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
               <folding />
             </state>
@@ -57,37 +57,37 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/nzmebookingphp/code/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5850">
-              <caret line="390" column="9" lean-forward="true" selection-start-line="390" selection-start-column="9" selection-end-line="390" selection-end-column="9" />
+            <state relative-caret-position="-303">
+              <caret line="345" column="372" lean-forward="false" selection-start-line="345" selection-start-column="372" selection-end-line="345" selection-end-column="372" />
               <folding>
-                <marker date="1535990767947" expanded="true" signature="84:98" ph="SELECT * FRO... ${global_mysql_configuration_table}" />
-                <marker date="1535990767947" expanded="true" signature="1730:1805" ph="SELECT * FRO... ${global_mysql_users_table}" />
-                <marker date="1535990767947" expanded="true" signature="2033:2110" ph="SELECT * FRO... ${global_mysql_users_table}" />
-                <marker date="1535990767947" expanded="true" signature="2820:3005" ph="SELECT * FRO... ${global_mysql_users_table}" />
-                <marker date="1535990767947" expanded="true" signature="3998:4069" ph="SELECT * FRO... ${global_mysql_users_table}" />
-                <marker date="1535990767947" expanded="true" signature="5724:5771" ph="SELECT * FRO... ${global_mysql_users_table}" />
-                <marker date="1535990767947" expanded="true" signature="6393:6730" ph="INSERT INTO ${global_mysql_users_table}... " />
-                <marker date="1535990767947" expanded="true" signature="7205:7294" ph="SELECT * FRO... ${global_mysql_users_table}" />
-                <marker date="1535990767947" expanded="true" signature="8333:8547" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-                <marker date="1535990767947" expanded="true" signature="8825:9002" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-                <marker date="1535990767947" expanded="true" signature="9590:9856" ph="INSERT INTO ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="10431:10609" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-                <marker date="1535990767947" expanded="true" signature="10793:11143" ph="INSERT INTO ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="11600:11866" ph="INSERT INTO ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="12486:12654" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-                <marker date="1535990767947" expanded="true" signature="12872:13222" ph="INSERT INTO ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="13949:14089" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-                <marker date="1535990767947" expanded="true" signature="14348:14486" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="15989:16077" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="16232:16301" ph="DELETE FROM ${global_mysql_users_table}... " />
-                <marker date="1535990767947" expanded="true" signature="16422:16510" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="16750:16839" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="16991:17061" ph="DELETE FROM ${global_mysql_users_table}... " />
-                <marker date="1535990767947" expanded="true" signature="17181:17270" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="17427:17472" ph="DELETE FROM ${global_mysql_users_table}... " />
-                <marker date="1535990767947" expanded="true" signature="17591:17643" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-                <marker date="1535990767947" expanded="true" signature="18636:18726" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-                <marker date="1535990767947" expanded="true" signature="18981:19052" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1536008817473" expanded="true" signature="84:98" ph="SELECT * FRO... ${global_mysql_configuration_table}" />
+                <marker date="1536008817473" expanded="true" signature="1730:1805" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1536008817473" expanded="true" signature="2033:2110" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1536008817473" expanded="true" signature="2820:3005" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1536008817473" expanded="true" signature="3998:4069" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1536008817473" expanded="true" signature="5724:5771" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1536008817473" expanded="true" signature="6393:6730" ph="INSERT INTO ${global_mysql_users_table}... " />
+                <marker date="1536008817473" expanded="true" signature="7205:7294" ph="SELECT * FRO... ${global_mysql_users_table}" />
+                <marker date="1536008817473" expanded="true" signature="8333:8547" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1536008817473" expanded="true" signature="8825:9002" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1536008817473" expanded="true" signature="9590:9856" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="10431:10571" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1536008817473" expanded="true" signature="10755:11109" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="11566:11832" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="12452:12620" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1536008817473" expanded="true" signature="12838:13192" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="13919:14059" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1536008817473" expanded="true" signature="14318:14456" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="15959:16047" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="16202:16271" ph="DELETE FROM ${global_mysql_users_table}... " />
+                <marker date="1536008817473" expanded="true" signature="16392:16480" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="16720:16809" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="16961:17031" ph="DELETE FROM ${global_mysql_users_table}... " />
+                <marker date="1536008817473" expanded="true" signature="17151:17240" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="17397:17442" ph="DELETE FROM ${global_mysql_users_table}... " />
+                <marker date="1536008817473" expanded="true" signature="17561:17613" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+                <marker date="1536008817473" expanded="true" signature="18606:18696" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+                <marker date="1536008817473" expanded="true" signature="18951:19022" ph="SELECT * FRO... ${global_mysql_users_table}" />
               </folding>
             </state>
           </provider>
@@ -114,8 +114,8 @@
         <option value="$PROJECT_DIR$/nzmebookingphp/functions.php" />
         <option value="$PROJECT_DIR$/nzmebookingphp/code/index.php" />
         <option value="$PROJECT_DIR$/nzmebookingphp/code/js/main.js" />
-        <option value="$PROJECT_DIR$/nzmebookingphp/code/functions.php" />
         <option value="$PROJECT_DIR$/nzmebookingphp/code/reservation.php" />
+        <option value="$PROJECT_DIR$/nzmebookingphp/code/functions.php" />
       </list>
     </option>
   </component>
@@ -210,19 +210,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535974230028</updated>
-      <workItem from="1535974231346" duration="14084000" />
+      <workItem from="1535974231346" duration="15081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14084000" />
+    <option name="totallyTimeSpent" value="15081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="796" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -370,26 +369,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nzmebookingphp/code/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-232">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/nzmebookingphp/code/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="440" column="87" lean-forward="true" selection-start-line="440" selection-start-column="87" selection-end-line="440" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nzmebookingphp/code/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -405,39 +388,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/code/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-232">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nzmebookingphp/code/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/nzmebookingphp/code/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5850">
-          <caret line="390" column="9" lean-forward="true" selection-start-line="390" selection-start-column="9" selection-end-line="390" selection-end-column="9" />
+        <state relative-caret-position="-303">
+          <caret line="345" column="372" lean-forward="false" selection-start-line="345" selection-start-column="372" selection-end-line="345" selection-end-column="372" />
           <folding>
-            <marker date="1535990767947" expanded="true" signature="84:98" ph="SELECT * FRO... ${global_mysql_configuration_table}" />
-            <marker date="1535990767947" expanded="true" signature="1730:1805" ph="SELECT * FRO... ${global_mysql_users_table}" />
-            <marker date="1535990767947" expanded="true" signature="2033:2110" ph="SELECT * FRO... ${global_mysql_users_table}" />
-            <marker date="1535990767947" expanded="true" signature="2820:3005" ph="SELECT * FRO... ${global_mysql_users_table}" />
-            <marker date="1535990767947" expanded="true" signature="3998:4069" ph="SELECT * FRO... ${global_mysql_users_table}" />
-            <marker date="1535990767947" expanded="true" signature="5724:5771" ph="SELECT * FRO... ${global_mysql_users_table}" />
-            <marker date="1535990767947" expanded="true" signature="6393:6730" ph="INSERT INTO ${global_mysql_users_table}... " />
-            <marker date="1535990767947" expanded="true" signature="7205:7294" ph="SELECT * FRO... ${global_mysql_users_table}" />
-            <marker date="1535990767947" expanded="true" signature="8333:8547" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-            <marker date="1535990767947" expanded="true" signature="8825:9002" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-            <marker date="1535990767947" expanded="true" signature="9590:9856" ph="INSERT INTO ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="10431:10609" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-            <marker date="1535990767947" expanded="true" signature="10793:11143" ph="INSERT INTO ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="11600:11866" ph="INSERT INTO ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="12486:12654" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-            <marker date="1535990767947" expanded="true" signature="12872:13222" ph="INSERT INTO ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="13949:14089" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-            <marker date="1535990767947" expanded="true" signature="14348:14486" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="15989:16077" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="16232:16301" ph="DELETE FROM ${global_mysql_users_table}... " />
-            <marker date="1535990767947" expanded="true" signature="16422:16510" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="16750:16839" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="16991:17061" ph="DELETE FROM ${global_mysql_users_table}... " />
-            <marker date="1535990767947" expanded="true" signature="17181:17270" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="17427:17472" ph="DELETE FROM ${global_mysql_users_table}... " />
-            <marker date="1535990767947" expanded="true" signature="17591:17643" ph="DELETE FROM ${global_mysql_reservations_table}... " />
-            <marker date="1535990767947" expanded="true" signature="18636:18726" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
-            <marker date="1535990767947" expanded="true" signature="18981:19052" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1536008817473" expanded="true" signature="84:98" ph="SELECT * FRO... ${global_mysql_configuration_table}" />
+            <marker date="1536008817473" expanded="true" signature="1730:1805" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1536008817473" expanded="true" signature="2033:2110" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1536008817473" expanded="true" signature="2820:3005" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1536008817473" expanded="true" signature="3998:4069" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1536008817473" expanded="true" signature="5724:5771" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1536008817473" expanded="true" signature="6393:6730" ph="INSERT INTO ${global_mysql_users_table}... " />
+            <marker date="1536008817473" expanded="true" signature="7205:7294" ph="SELECT * FRO... ${global_mysql_users_table}" />
+            <marker date="1536008817473" expanded="true" signature="8333:8547" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1536008817473" expanded="true" signature="8825:9002" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1536008817473" expanded="true" signature="9590:9856" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="10431:10571" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1536008817473" expanded="true" signature="10755:11109" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="11566:11832" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="12452:12620" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1536008817473" expanded="true" signature="12838:13192" ph="INSERT INTO ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="13919:14059" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1536008817473" expanded="true" signature="14318:14456" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="15959:16047" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="16202:16271" ph="DELETE FROM ${global_mysql_users_table}... " />
+            <marker date="1536008817473" expanded="true" signature="16392:16480" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="16720:16809" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="16961:17031" ph="DELETE FROM ${global_mysql_users_table}... " />
+            <marker date="1536008817473" expanded="true" signature="17151:17240" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="17397:17442" ph="DELETE FROM ${global_mysql_users_table}... " />
+            <marker date="1536008817473" expanded="true" signature="17561:17613" ph="DELETE FROM ${global_mysql_reservations_table}... " />
+            <marker date="1536008817473" expanded="true" signature="18606:18696" ph="SELECT * FRO... ${global_mysql_reservations_table}" />
+            <marker date="1536008817473" expanded="true" signature="18951:19022" ph="SELECT * FRO... ${global_mysql_users_table}" />
           </folding>
         </state>
       </provider>
