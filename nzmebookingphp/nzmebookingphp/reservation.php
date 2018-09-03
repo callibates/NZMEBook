@@ -34,11 +34,21 @@ elseif(isset($_GET['read_reservation_details']))
 	$time = mysql_real_escape_string($_POST['time']);
 	echo read_reservation_details($week, $day, $time);
 }
-elseif(isset($_GET['week']) && isset($_GET['location']) && isset($_GET['studio']))
+elseif(isset($_GET['week']))
 {
 	$week = $_GET['week'];
 	$location = $_GET['location'];
 	$studio = $_GET['studio'];
+
+	if($location == null)
+	{
+		$location = 'Auckland';
+	}
+
+	if($studio == null)
+	{
+		$studio = 1;
+	}
 
 
 	echo '<table id="reservation_table"><colgroup span="1" id="reservation_time_colgroup"></colgroup><colgroup span="5" id="reservation_day_colgroup"></colgroup>';
@@ -74,7 +84,7 @@ elseif(isset($_GET['week']) && isset($_GET['location']) && isset($_GET['studio']
 }
 else
 {
-	echo '</div><div class="box_div" id="reservation_div"><div class="box_top_div" id="reservation_top_div"><div id="reservation_top_left_div"><a href="." id="previous_week_a">&lt; Previous week</a></div><select id = "location" OnChange = "regionreservations()"> <option value="Auckland">Auckland</option><option value="Wellington">Wellington</option><option value="Christchurch">Christchurch</option></select><select id = "studio" OnChange = "regionreservations()"><option value= 1>Studio 1</option><option value= 2>Studio 2</option><option value= 3>Studio 3</option><option value= 4>Studio 4</option></select><div id="reservation_top_right_div"><a href="." id="next_week_a">Next week &gt;</a></div></div><div class="box_body_div"><div id="reservation_table_div"></div></div></div><div id="reservation_details_div">';
+	echo '</div><div class="box_div" id="reservation_div"><div class="box_top_div" id="reservation_top_div"><div id="reservation_top_left_div"><a href="." id="previous_week_a">&lt; Previous week</a></div><div id="reservation_top_center_div">Reservations for week <span id="week_number_span">' . global_week_number . '</span></div><select id = "location" OnChange = "regionreservations()"> <option value="Auckland">Auckland</option><option value="Wellington">Wellington</option><option value="Christchurch">Christchurch</option></select><select id = "studio" OnChange = "regionreservations()"><option value= 1>Studio 1</option><option value= 2>Studio 2</option><option value= 3>Studio 3</option><option value= 4>Studio 4</option></select><div id="reservation_top_right_div"><a href="." id="next_week_a">Next week &gt;</a></div></div><div class="box_body_div"><div id="reservation_table_div"></div></div></div><div id="reservation_details_div">';
 }
 
 ?>
