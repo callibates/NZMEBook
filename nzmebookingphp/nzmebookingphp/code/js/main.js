@@ -435,9 +435,10 @@ function toggle_reservation_time(id, week, day, time, from, set)
 
 	if(user_name == '')
 	{
+		console.log("Username is empty triggered");
 		$(id).html('Wait...');
-        var obj = document.getElementById("loc").value;
-        var obj2 = document.getElementById("stu").value;
+        var obj = document.getElementById("loc").value;//location
+        var obj2 = document.getElementById("stu").value;//studio number
 		$.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: obj, stu: obj2 }, function(data)
 		{
 			if(data == 1)
@@ -502,6 +503,7 @@ function toggle_reservation_time(id, week, day, time, from, set)
 }
 function toggle_reservation_time(id, week, day, time, from, set, loc, stu)
 {
+	console.log("Toggle reservation time is being triggered.");//this is working
     if(session_user_is_admin == '1')
     {
         if(week < global_week_number || week == global_week_number && day < global_day_number)
@@ -514,15 +516,15 @@ function toggle_reservation_time(id, week, day, time, from, set, loc, stu)
         }
     }
 
-    var user_name = $(id).html();
+	var user_name = $(id).html();
     if(set == true){
+		console.log("Set is true!");//works
         user_name = '';
     }
 
     if(user_name == '')
     {
-        $(id).html('Wait...');
-
+		console.log("Time to make a booking!");
         $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu }, function(data)
         {
             if(data == 1)
@@ -1062,12 +1064,17 @@ $(document).ready( function()
 		document.getElementById('w').value = array[1];
 		document.getElementById('f').value = array[0];
 		document.getElementById('oid').value = this.id;
-
+		console.log("thing");
         openForm();
-    });
+	});
+	//Method which stores the form data into the database
 	$(document).on('click', '.btn', function(){
 		var array = document.getElementById('oid').value.split(':');
-		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true);
+		console.log("Printy");
+		var loc = document.getElementById("loc").value;
+		var stu = document.getElementById("stu").value;
+		console.log("Studio:"+stu+" Location:"+loc);//this is working
+		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu);
     });
 	$(document).on('mousemove', '.reservation_time_cell_div', function()
 	{
@@ -1128,7 +1135,8 @@ function hash()
 		}
 	}
 }
-function openForm() {
+function openForm(array) {
+
     document.getElementById("myForm").style.display = "block";
 }
 

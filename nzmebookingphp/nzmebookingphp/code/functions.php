@@ -355,23 +355,15 @@ function make_reservation($week, $day, $time)
 }
 function make_reservation2($week, $day, $time, $loc, $stu)
 {
+	debug_to_console("Make reservation triggered");
     $user_id = $_SESSION['user_id'];
     $user_email = $_SESSION['user_email'];
     $user_name = $_SESSION['user_name'];
-    if($loc == "Auckland"){
-    	$loc = 'Auckland';
-	}else if($loc == "Christchurch"){
-        $loc = 'Christchurch';
-	}else if ($loc == "Wellington"){
-    	$loc = 'Wellington';
-	}else{
-    	$loc = 'Auckland';
-	}
-
-	$stu = '1';
+    debug_to_console("Location: ".$loc." Studio: ".$stu);
 
     if($week == '0' && $day == '0' && $time == '0')
     {
+		debug_to_console("Triggered in week0");
         mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name) VALUES (now(),'$week','$day','$time','$user_id','$user_email','$user_name')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
         return(1);
@@ -390,19 +382,28 @@ function make_reservation2($week, $day, $time, $loc, $stu)
 
         if(mysql_num_rows($query) < 1)
         {
-            $year = global_year;
-
-            mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio) VALUES (now(),'$year','$week','$day','$time','$user_id','$user_email','$user_name', '$loc', '$stu')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+			$year = global_year;
+			debug_to_console("Triggered in weeknot0");
+			
+			//storing into database line
+            mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio) VALUES (now(),'2018','$week','$day','$time','$user_id','$user_email','$user_name', '$loc', '$stu')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
             return(1);
         }
         else
         {
+			debug_to_console("Triggered in else statement");
             return('Someone else just reserved this time');
         }
     }
 }
+function debug_to_console( $data ) {
+    $output = $data;
+    if ( is_array( $output ) )
+        $output = implode( ',', $output);
 
+    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+}
 function delete_reservation($week, $day, $time)
 {
 	if($week < global_week_number && $_SESSION['user_is_admin'] != '1' || $week == global_week_number && $day < global_day_number && $_SESSION['user_is_admin'] != '1')
