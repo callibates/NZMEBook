@@ -591,7 +591,7 @@ function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note)
     }
 }
 
-function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note, clientName, contactName, NumScr)
+function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note, clientName, contactName, NumScr, tag)
 {
 	console.log("Toggle reservation time is being triggered.");//this is working
     if(session_user_is_admin == '1')
@@ -615,7 +615,7 @@ function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note,
     if(user_name == '')
     {
 		console.log("Time to make a booking!");
-        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu, note:note, clientName:clientName, contactName:contactName, NumScr:NumScr}, function(data)
+        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu, note:note, clientName:clientName, contactName:contactName, NumScr:NumScr, tag:tag}, function(data)
         {
             if(data == 1)
             {
@@ -1178,6 +1178,7 @@ $(document).ready( function()
 		console.log("Printy");
 		var loc = null;
 		var stu = null;
+		var tag = null;
 		var cloc = document.getElementById("cloc").value;
 		var cstu = document.getElementById("cstu").value;
 		var sloc = document.getElementById("sloc").value;
@@ -1197,53 +1198,62 @@ $(document).ready( function()
 		{
 			loc = cloc;
 			stu = cstu;
+			tag = "ClientBooking";
 			
 		}
 		else if(cloc==sloc && sloc == vloc &&cstu != sstu &&sstu == vstu)
 		{
 			loc = cloc;
 			stu = cstu;
+			tag = "ClientBooking";
 		}
 		else if(cloc!=sloc && sloc == vloc &&cstu != sstu &&sstu == vstu)
 		{
 			loc = cloc;
 			stu = cstu;
+			tag = "ClientBooking";
 		}
 		else if(cloc==vloc && sloc != vloc &&cstu == vstu &&sstu == vstu)
 		{
 			loc = sloc;
 			stu = sstu;
+			tag = "StudioBooking";
 		}
 		else if(cloc==vloc && sloc == vloc &&cstu == vstu &&sstu != vstu)
 		{
 			loc = sloc;
 			stu = sstu;
+			tag = "StudioBooking";
 		}
 		else if(cloc==vloc && sloc != vloc &&cstu == vstu &&sstu != vstu)
 		{
 			loc = sloc;
 			stu = sstu;
+			tag = "StudioBooking";
 		}
 		else if(cloc==sloc && sloc == vloc &&cstu == sstu &&sstu != vstu)
 		{
 			loc = vloc;
 			stu = vstu;
+			tag = "VoiceBooking";
 		}
 		else if(cloc==sloc && sloc != vloc &&cstu == vstu &&sstu == vstu)
 		{
 			loc = vloc;
 			stu = vstu;
+			tag = "VoiceBooking";
 		}
 		else if(cloc==sloc && sloc != vloc &&cstu == sstu &&sstu != vstu)
 		{
 			loc = vloc;
 			stu = vstu;
+			tag = "VoiceBooking";
 		}
 		
 
 		console.log("Studio:"+stu+" Location:"+loc+" note: "+note);//this is working
 		
-		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName, NumScr);
+		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName, NumScr, tag);
 		/*if(clientName == '' && contactName == '')
 		{
 			toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note);
