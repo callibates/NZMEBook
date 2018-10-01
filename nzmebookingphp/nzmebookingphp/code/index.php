@@ -38,9 +38,9 @@
 </div>
 <div class="form-popup" id="myFormStudio">
     <form class="form-container">
-        <h1>Make A Booking</h1>
+        <h1>Make A Studio Booking</h1>
 
-        <label for="usrnm"><b>Username</b></label>
+        <label for="usrnm"><i>Username</i></label>
         <input type="text" placeholder="Enter Username" name="usrnm" id="usrnm">
 
         <input type="hidden" name="d" id="d">
@@ -53,35 +53,35 @@
 
         <input type="hidden" name="oid" id="oid">
 
-        <label for="loc"><b>Location</b></label>
+        <label for="loc"><i>Location</i></label>
         <select name="loc" id="sloc">
             <option value="Auckland" selected="selected">Auckland</option>
             <option value="Christchurch">Christchurch</option>
             <option value="Wellington">Wellington</option>
         </select>
 
-        <label for="stu"><b>Studio</b></label>
+        <label for="stu"><i>Studio</i></label>
         <select name="stu" id="sstu">
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
         </select>
         <br><br>
-        <label for="notes"><b>Notes:</b></label>
+        <label for="notes"><i>Notes:</i></label>
         <input type="text" placeholder="Additional Notes..." name="notes" id="snotes">
 
-        <button type="submit" class="btn" >Make Booking</button>
+        <button type="submit" class="btn" >Make Studio Booking</button>
         <button type="button" class="cancello" onclick="closeForm()">Close</button>
     </form>
 </div>
 <div class="form-popup" id="myFormClient">
     <form class="form-container">
-        <h1>Make A Booking</h1>
+        <h1>Make A Client Booking</h1>
 
-        <label for="cliname"><b>Client Name</b></label>
+        <label for="cliname"><i>Client Name</i></label>
         <input type="text" name="cliname" id="cliname">
         <br>
-        <label for="conname"><b>Contact Name</b></label>
+        <label for="conname"><i>Contact Name</i></label>
         <input type="text" name="conname" id="conname">
 
         <input type="hidden" name="d" id="d">
@@ -94,32 +94,32 @@
 
         <input type="hidden" name="oid" id="oid">
 
-        <label for="loc"><b>Location</b></label>
+        <label for="loc"><i>Location</i></label>
         <select name="loc" id="cloc">
             <option value="Auckland" selected="selected">Auckland</option>
             <option value="Christchurch">Christchurch</option>
             <option value="Wellington">Wellington</option>
         </select>
 
-        <label for="stu"><b>Studio</b></label>
+        <label for="stu"><i>Studio</i></label>
         <select name="stu" id="cstu">
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
         </select>
         <br><br>
-        <label for="notes"><b>Notes:</b></label>
+        <label for="notes"><i>Notes:</i></label>
         <input type="text" placeholder="Additional Notes..." name="notes" id="cnotes">
 
-        <button type="submit" class="btn" >Make Booking</button>
+        <button type="submit" class="btn" >Make Client Booking</button>
         <button type="button" class="cancello" onclick="closeForm()">Close</button>
     </form>
 </div>
 <div class="form-popup" id="myFormVoice">
     <form class="form-container">
-        <h1>Make A Booking</h1>
+        <h1>Make A Voice Booking</h1>
 
-        <label for="usrnm"><b>Username</b></label>
+        <label for="usrnm"><i>Username</i></label>
         <input type="text" placeholder="Enter Username" name="usrnm" id="usrnm">
 
         <input type="hidden" name="d" id="d">
@@ -132,21 +132,21 @@
 
         <input type="hidden" name="oid" id="oid">
 
-        <label for="loc"><b>Location</b></label>
+        <label for="loc"><i>Location</i></label>
         <select name="loc" id="vloc">
             <option value="Auckland" selected="selected">Auckland</option>
             <option value="Christchurch">Christchurch</option>
             <option value="Wellington">Wellington</option>
         </select>
 
-        <label for="stu"><b>Studio</b></label>
+        <label for="stu"><i>Studio</i></label>
         <select name="stu" id="vstu">
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
         </select>
         <br>
-        <label for="scripts"><b># Scripts:</b></label>
+        <label for="scripts"><i># Scripts:</i></label>
         <br>
         <select name="scripts" id="Numscripts">
             <option value="1" selected="selected">1</option>
@@ -161,7 +161,7 @@
             <option value="10">10</option>
         </select>
 
-        <button type="submit" class="btn" >Make Booking</button>
+        <button type="submit" class="btn" >Make Voice Booking</button>
         <button type="button" class="cancello" onclick="closeForm()">Close</button>
     </form>
 </div>

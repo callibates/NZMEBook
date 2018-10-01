@@ -77,7 +77,7 @@ function showreservations(studionum)
 	}
 	page_load('reservation');
 	div_hide('#content_div');
-	
+
 	$.get('reservation.php', function(data)
 	{
 		$('#content_div').html(data);
@@ -97,7 +97,7 @@ function showAucklandreservations(studionum)
 	var studio = studionum;
 	page_load('reservation');
 	div_hide('#content_div');
-	
+
 	$.get('reservation.php', function(data)
 	{
 		$('#content_div').html(data);
@@ -108,14 +108,14 @@ function showAucklandreservations(studionum)
 			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
 			page_loaded();
 		});
-		
+
 		var obj = document.getElementById("location");
 		obj.value = "Auckland";
 
 		var obj2 = document.getElementById("studio");
 		obj2.value = studio;
 	});
-	
+
 
 
 
@@ -137,13 +137,13 @@ function showWellingtonreservations(studionum)
 			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
 			page_loaded();
 		});
-		
+
 		var obj = document.getElementById("location");
 		obj.value = "Wellington";
 
 		var obj2 = document.getElementById("studio");
 		obj2.value = studio;
-		
+
 	});
 }
 
@@ -163,13 +163,13 @@ function showchristchurchreservations(studionum)
 			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
 			page_loaded();
 		});
-		
+
 		var obj = document.getElementById("location");
 		obj.value = "Christchurch";
 
 		var obj2 = document.getElementById("studio");
 		obj2.value = studio;
-		
+
 	});
 }
 
@@ -1193,13 +1193,13 @@ $(document).ready( function()
 		{
 			note = document.getElementById("cnotes").value;
 		}
-		
+
 		if(cloc==sloc && sloc == vloc &&cstu == sstu &&sstu == vstu)
 		{
 			loc = cloc;
 			stu = cstu;
 			tag = "ClientBooking";
-			
+
 		}
 		else if(cloc==sloc && sloc == vloc &&cstu != sstu &&sstu == vstu)
 		{
@@ -1249,10 +1249,10 @@ $(document).ready( function()
 			stu = vstu;
 			tag = "VoiceBooking";
 		}
-		
+
 
 		console.log("Studio:"+stu+" Location:"+loc+" note: "+note);//this is working
-		
+
 		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName, NumScr, tag);
 		/*if(clientName == '' && contactName == '')
 		{

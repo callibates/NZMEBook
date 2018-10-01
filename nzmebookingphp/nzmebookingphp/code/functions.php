@@ -307,11 +307,13 @@ function read_reservation_details($week, $day, $time)
 	if(empty($reservation))
 	{
 		return(0);
-
 	}
 	else
 	{
-		return('<b>Reservation made:</b> ' . $reservation['reservation_made_time'] . '<br><b>User\'s email:</b> ' . $reservation['reservation_user_email']);
+		return('<b>Reservation Date and Time: </b> ' . $reservation['reservation_made_time'] . '<br><b>Bookers Email: </b> ' . $reservation['reservation_user_email']
+	  . '<br><b>Bookers Name: </b> ' . $reservation['reservation_user_name'] . '<br><b>Reservation Location: </b>' . $reservation['reservation_location']
+		. '<br><b>Reservation Studio: </b>' . $reservation['reservation_studio'] . '<br><b>Reservation Notes: </b>' . $reservation['reservation_note']
+	  . '<br><b>Booking Type: </b>' . $reservation['reservation_tag']);
 	}
 }
 
@@ -384,7 +386,7 @@ function make_reservation2($week, $day, $time, $loc, $stu, $note, $clientName, $
         {
 			$year = global_year;
 			debug_to_console("Triggered in weeknot0");
-			
+
 			//storing into database line
             mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio, reservation_note, reservation_client_name, reservation_contact_name, reservation_NumScr, reservation_tag) VALUES (now(),'2018','$week','$day','$time','$user_id','$user_email','$user_name', '$loc', '$stu', '$note', '$clientName', '$contactName', '$NumScr', '$tag')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
