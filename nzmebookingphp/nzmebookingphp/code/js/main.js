@@ -1067,6 +1067,21 @@ $(document).ready( function()
 		console.log("thing");
         openForm();
 	});
+	$(document).on('click', '.clientb', function()
+	{
+		closeForm();
+		openFormClient();
+	});
+	$(document).on('click', '.studiob', function()
+	{
+		closeForm();
+		openFormStudio();
+	});
+	$(document).on('click', '.voiceb', function()
+	{
+		closeForm();
+		openFormVoice();
+	});
 	//Method which stores the form data into the database
 	$(document).on('click', '.btn', function(){
 		var array = document.getElementById('oid').value.split(':');
@@ -1075,7 +1090,10 @@ $(document).ready( function()
 		var stu = document.getElementById("stu").value;
 		console.log("Studio:"+stu+" Location:"+loc);//this is working
 		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu);
-    });
+	});
+	$(document).on('click', '.cancello', function(){
+		closeAll();
+	});
 	$(document).on('mousemove', '.reservation_time_cell_div', function()
 	{
 		var array = this.id.split(':');
@@ -1137,13 +1155,35 @@ function hash()
 }
 function openForm(array) {
 
-    document.getElementById("myForm").style.display = "block";
+    document.getElementById("myForm0").style.display = "block";
 }
-
-
-
+function openFormClient(array) {
+	document.getElementById("myFormClient").style.display = "block";
+}
+function closeFormClient(array) {
+	document.getElementById("myFormClient").style.display = "none";
+}
+function openFormVoice(array) {
+	document.getElementById("myFormVoice").style.display = "block";
+}
+function closeFormVoice(array) {
+	document.getElementById("myFormVoice").style.display = "none";
+}
+function openFormStudio(array) {
+	document.getElementById("myFormStudio").style.display = "block";
+}
+function closeFormStudio(array) {
+	document.getElementById("myFormStudio").style.display = "none";
+}
 function closeForm() {
-    $(document).getElementById("myForm").style.display = "none";
+    document.getElementById("myForm0").style.display = "none";
+}
+function closeAll(){
+	document.getElementById("myForm0").style.display = "none";
+	document.getElementById("myFormStudio").style.display = "none";
+	document.getElementById("myFormVoice").style.display = "none";
+	document.getElementById("myFormClient").style.display = "none";
+
 }
 
 // Window load
