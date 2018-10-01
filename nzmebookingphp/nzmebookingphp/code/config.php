@@ -4,9 +4,9 @@
 
 // MySQL details
 define('global_mysql_server', 'cmslamp14.aut.ac.nz');
-define('global_mysql_user', 'fcf0178');
-define('global_mysql_password', 'Grounded4now');
-define('global_mysql_database', 'fcf0178');
+define('global_mysql_user', 'gwh3504');
+define('global_mysql_password', 'liamlinhaO130');
+define('global_mysql_database', 'gwh3504');
 
 // Salt for password encryption. Changing it is recommended. Use 9 random characters
 // This MUST be 9 characters, and must NOT be changed after users have been created

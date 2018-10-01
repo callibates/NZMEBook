@@ -353,7 +353,7 @@ function make_reservation($week, $day, $time)
 		}
 	}
 }
-function make_reservation2($week, $day, $time, $loc, $stu)
+function make_reservation2($week, $day, $time, $loc, $stu, $note, $clientName, $contactName)
 {
 	debug_to_console("Make reservation triggered");
     $user_id = $_SESSION['user_id'];
@@ -386,7 +386,7 @@ function make_reservation2($week, $day, $time, $loc, $stu)
 			debug_to_console("Triggered in weeknot0");
 			
 			//storing into database line
-            mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio) VALUES (now(),'2018','$week','$day','$time','$user_id','$user_email','$user_name', '$loc', '$stu')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
+            mysql_query("INSERT INTO " . global_mysql_reservations_table . " (reservation_made_time,reservation_year,reservation_week,reservation_day,reservation_time,reservation_user_id,reservation_user_email,reservation_user_name, reservation_location, reservation_studio, reservation_note, reservation_client_name, reservation_contact_name) VALUES (now(),'2018','$week','$day','$time','$user_id','$user_email','$user_name', '$loc', '$stu', '$note', '$clientName', '$contactName')")or die('<span class="error_span"><u>MySQL error:</u> ' . htmlspecialchars(mysql_error()) . '</span>');
 
             return(1);
         }

@@ -11,7 +11,10 @@ if(isset($_GET['make_reservation']))
 	$time = mysql_real_escape_string($_POST['time']);
 	$loc = mysql_real_escape_string($_POST['loc']);
 	$stu = mysql_real_escape_string($_POST['stu']);
-	echo make_reservation2($week, $day, $time, $loc, $stu);
+	$note = mysql_real_escape_string($_POST['note']);
+	$clientName = mysql_real_escape_string($_POST['clientName']);
+	$contactName = mysql_real_escape_string($_POST['contactName']);
+	echo make_reservation2($week, $day, $time, $loc, $stu, $note, $clientName, $contactName);
 }
 elseif(isset($_GET['delete_reservation']))
 {

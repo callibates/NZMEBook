@@ -68,7 +68,7 @@
         </select>
         <br><br>
         <label for="notes"><b>Notes:</b></label>
-        <input type="text" placeholder="Additional Notes..." name="notes" id="notes">
+        <input type="text" placeholder="Additional Notes..." name="notes" id="snotes">
 
         <button type="submit" class="btn" >Make Booking</button>
         <button type="button" class="cancello" onclick="closeForm()">Close</button>
@@ -109,7 +109,7 @@
         </select>
         <br><br>
         <label for="notes"><b>Notes:</b></label>
-        <input type="text" placeholder="Additional Notes..." name="notes" id="notes">
+        <input type="text" placeholder="Additional Notes..." name="notes" id="cnotes">
 
         <button type="submit" class="btn" >Make Booking</button>
         <button type="button" class="cancello" onclick="closeForm()">Close</button>

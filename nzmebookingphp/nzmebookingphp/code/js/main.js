@@ -504,7 +504,7 @@ function toggle_reservation_time(id, week, day, time, from, set)
 		}
 	}
 }
-function toggle_reservation_time(id, week, day, time, from, set, loc, stu)
+function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note)
 {
 	console.log("Toggle reservation time is being triggered.");//this is working
     if(session_user_is_admin == '1')
@@ -528,7 +528,94 @@ function toggle_reservation_time(id, week, day, time, from, set, loc, stu)
     if(user_name == '')
     {
 		console.log("Time to make a booking!");
-        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu }, function(data)
+        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu, note:note}, function(data)
+        {
+            if(data == 1)
+            {
+                setTimeout(function() { read_reservation(id, week, day, time); }, 1000);
+            }
+            else
+            {
+                notify(data, 4);
+                setTimeout(function() { read_reservation(id, week, day, time); }, 2000);
+            }
+        });
+    }
+    else
+    {
+        if(offclick_event == 'mouseup' || from == 'details')
+        {
+            if(user_name == 'Wait...')
+            {
+                notify('One click is enough', 4);
+            }
+            else if(user_name == session_user_name || session_user_is_admin == '1')
+            {
+                if(user_name != session_user_name && session_user_is_admin == '1')
+                {
+                    var delete_confirm = confirm('This is not your reservation, but because you\'re an admin you can remove other users\' reservations. Are you sure you want to do this?');
+                }
+                else
+                {
+                    var delete_confirm = true;
+                }
+
+                if(delete_confirm)
+                {
+                    $(id).html('Wait...');
+
+                    $.post('reservation.php?delete_reservation', { week: week, day: day, time: time }, function(data)
+                    {
+                        if(data == 1)
+                        {
+                            setTimeout(function() { read_reservation(id, week, day, time); }, 1000);
+                        }
+                        else
+                        {
+                            notify(data, 4);
+                            setTimeout(function() { read_reservation(id, week, day, time); }, 2000);
+                        }
+                    });
+                }
+            }
+            else
+            {
+                notify('You can\'t remove other users\' reservations', 2);
+            }
+
+            if($('#reservation_details_div').is(':visible'))
+            {
+                read_reservation_details();
+            }
+        }
+    }
+}
+
+function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note, clientName, contactName)
+{
+	console.log("Toggle reservation time is being triggered.");//this is working
+    if(session_user_is_admin == '1')
+    {
+        if(week < global_week_number || week == global_week_number && day < global_day_number)
+        {
+            notify('You are reserving back in time. You can do that because you\'re an admin', 4);
+        }
+        else if(week > global_week_number + global_weeks_forward)
+        {
+            notify('You are reserving more than '+global_weeks_forward+' weeks forward in time. You can do that because you\'re an admin', 4);
+        }
+    }
+
+	var user_name = $(id).html();
+    if(set == true){
+		console.log("Set is true!");//works
+        user_name = '';
+    }
+
+    if(user_name == '')
+    {
+		console.log("Time to make a booking!");
+        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu, note:note, clientName:clientName, contactName:contactName}, function(data)
         {
             if(data == 1)
             {
@@ -1091,8 +1178,24 @@ $(document).ready( function()
 		console.log("Printy");
 		var loc = document.getElementById("loc").value;
 		var stu = document.getElementById("stu").value;
-		console.log("Studio:"+stu+" Location:"+loc);//this is working
-		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu);
+		var note = document.getElementById("snotes").value;
+		var clientName = document.getElementById("cliname").value;
+		var contactName = document.getElementById("conname").value;
+		if(note == '')
+		{
+			note = document.getElementById("cnotes").value;
+		}
+
+		console.log("Studio:"+stu+" Location:"+loc+" note: "+note);//this is working
+		
+		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName);
+		/*if(clientName == '' && contactName == '')
+		{
+			toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note);
+		}
+		else{
+			toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName);
+		}*/
 	});
 	$(document).on('click', '.cancello', function(){
 		closeAll();
