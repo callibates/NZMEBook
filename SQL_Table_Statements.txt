@@ -25,6 +25,10 @@ CREATE TABLE nzmebooking_reservations (
 		reservation_user_name VARCHAR(100) COLLATE utf8_unicode_ci NOT NULL,
 		reservation_location VARCHAR(100) NOT NULL, 
 		reservation_studio VARCHAR(100) NOT NULL,
+		reservation_client_name VARCHAR(100),
+		reservation_contact_name VARCHAR(100),
+		reservation_note VARCHAR(500),
+		reservation_NumScr INT(11),
 		PRIMARY KEY (reservation_id)
 	)
 
