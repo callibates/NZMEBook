@@ -55,7 +55,17 @@ elseif(isset($_GET['week']))
 
 	echo '<table id="reservation_table"><colgroup span="1" id="reservation_time_colgroup"></colgroup><colgroup span="5" id="reservation_day_colgroup"></colgroup>';
 
-	$days_row = '<tr><td id="reservation_corner_td"><input type="button" class="blue_button small_button" id="reservation_today_button" value="Today"></td><th class="reservation_day_th">Monday</th><th class="reservation_day_th">Tuesday</th><th class="reservation_day_th">Wednesday</th><th class="reservation_day_th">Thursday</th><th class="reservation_day_th">Friday</th></tr>';
+	$datemonday = date_create();
+	date_isodate_set($datemonday,date("Y"),$week,1);
+	$datetuesday = date_create();
+	date_isodate_set($datetuesday,date("Y"),$week,2);
+	$datewednesday = date_create();
+	date_isodate_set($datewednesday,date("Y"),$week,3);
+	$datethursday = date_create();
+	date_isodate_set($datethursday,date("Y"),$week,4);
+	$datefriday = date_create();
+	date_isodate_set($datefriday,date("Y"),$week,5);
+	$days_row = '<tr><td id="reservation_corner_td"><input type="button" class="blue_button small_button" id="reservation_today_button" value="Today"></td><th class="reservation_day_th">'. date_format($datemonday,"d/m") .'</th><th class="reservation_day_th">'. date_format($datetuesday,"d/m") .'</th><th class="reservation_day_th">'. date_format($datewednesday,"d/m") .'</th><th class="reservation_day_th">'. date_format($datethursday,"d/m") .'</th><th class="reservation_day_th">'. date_format($datefriday,"d/m") .'</th></tr>';
 
 	if($week == global_week_number)
 	{
