@@ -591,7 +591,7 @@ function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note)
     }
 }
 
-function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note, clientName, contactName)
+function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note, clientName, contactName, NumScr)
 {
 	console.log("Toggle reservation time is being triggered.");//this is working
     if(session_user_is_admin == '1')
@@ -615,7 +615,7 @@ function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note,
     if(user_name == '')
     {
 		console.log("Time to make a booking!");
-        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu, note:note, clientName:clientName, contactName:contactName}, function(data)
+        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu, note:note, clientName:clientName, contactName:contactName, NumScr:NumScr}, function(data)
         {
             if(data == 1)
             {
@@ -1176,31 +1176,74 @@ $(document).ready( function()
 	$(document).on('click', '.btn', function(){
 		var array = document.getElementById('oid').value.split(':');
 		console.log("Printy");
-		var loc = document.getElementById("cloc").value;
-		var stu = document.getElementById("cstu").value;
+		var loc = null;
+		var stu = null;
+		var cloc = document.getElementById("cloc").value;
+		var cstu = document.getElementById("cstu").value;
+		var sloc = document.getElementById("sloc").value;
+		var	sstu = document.getElementById("sstu").value;
+		var vloc = document.getElementById("vloc").value;
+		var	vstu = document.getElementById("vstu").value;
 		var note = document.getElementById("snotes").value;
 		var clientName = document.getElementById("cliname").value;
 		var contactName = document.getElementById("conname").value;
+		var NumScr = document.getElementById("Numscripts").value;
 		if(note == '')
 		{
 			note = document.getElementById("cnotes").value;
 		}
 		
-		if(loc == '' && stu == '')
+		if(cloc==sloc && sloc == vloc &&cstu == sstu &&sstu == vstu)
 		{
-			loc = document.getElementById("sloc").value;
-			stu = document.getElementById("sstu").value;
+			loc = cloc;
+			stu = cstu;
 			
-			if(loc == '' && stu == '')
-			{
-				loc = document.getElementById("vloc").value;
-				stu = document.getElementById("vstu").value;
-			}
 		}
+		else if(cloc==sloc && sloc == vloc &&cstu != sstu &&sstu == vstu)
+		{
+			loc = cloc;
+			stu = cstu;
+		}
+		else if(cloc!=sloc && sloc == vloc &&cstu != sstu &&sstu == vstu)
+		{
+			loc = cloc;
+			stu = cstu;
+		}
+		else if(cloc==vloc && sloc != vloc &&cstu == vstu &&sstu == vstu)
+		{
+			loc = sloc;
+			stu = sstu;
+		}
+		else if(cloc==vloc && sloc == vloc &&cstu == vstu &&sstu != vstu)
+		{
+			loc = sloc;
+			stu = sstu;
+		}
+		else if(cloc==vloc && sloc != vloc &&cstu == vstu &&sstu != vstu)
+		{
+			loc = sloc;
+			stu = sstu;
+		}
+		else if(cloc==sloc && sloc == vloc &&cstu == sstu &&sstu != vstu)
+		{
+			loc = vloc;
+			stu = vstu;
+		}
+		else if(cloc==sloc && sloc != vloc &&cstu == vstu &&sstu == vstu)
+		{
+			loc = vloc;
+			stu = vstu;
+		}
+		else if(cloc==sloc && sloc != vloc &&cstu == sstu &&sstu != vstu)
+		{
+			loc = vloc;
+			stu = vstu;
+		}
+		
 
 		console.log("Studio:"+stu+" Location:"+loc+" note: "+note);//this is working
 		
-		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName);
+		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName, NumScr);
 		/*if(clientName == '' && contactName == '')
 		{
 			toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note);

@@ -148,7 +148,7 @@
         <br>
         <label for="scripts"><b># Scripts:</b></label>
         <br>
-        <select name="scripts" id="scripts">
+        <select name="scripts" id="Numscripts">
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
