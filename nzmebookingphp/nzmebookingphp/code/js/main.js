@@ -108,13 +108,16 @@ function showAucklandreservations(studionum)
 			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
 			page_loaded();
 		});
+		
+		var obj = document.getElementById("location");
+		obj.value = "Auckland";
+
+		var obj2 = document.getElementById("studio");
+		obj2.value = studio;
 	});
+	
 
-	var obj = document.getElementById("location");
-	obj.value = "Auckland";
 
-	var obj2 = document.getElementById("studio");
-	obj2.value = studio;
 
 }
 
