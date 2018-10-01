@@ -54,14 +54,14 @@
         <input type="hidden" name="oid" id="oid">
 
         <label for="loc"><b>Location</b></label>
-        <select name="loc" id="loc">
+        <select name="loc" id="sloc">
             <option value="Auckland" selected="selected">Auckland</option>
             <option value="Christchurch">Christchurch</option>
             <option value="Wellington">Wellington</option>
         </select>
 
         <label for="stu"><b>Studio</b></label>
-        <select name="stu" id="stu">
+        <select name="stu" id="sstu">
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -95,14 +95,14 @@
         <input type="hidden" name="oid" id="oid">
 
         <label for="loc"><b>Location</b></label>
-        <select name="loc" id="loc">
+        <select name="loc" id="cloc">
             <option value="Auckland" selected="selected">Auckland</option>
             <option value="Christchurch">Christchurch</option>
             <option value="Wellington">Wellington</option>
         </select>
 
         <label for="stu"><b>Studio</b></label>
-        <select name="stu" id="stu">
+        <select name="stu" id="cstu">
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -133,14 +133,14 @@
         <input type="hidden" name="oid" id="oid">
 
         <label for="loc"><b>Location</b></label>
-        <select name="loc" id="loc">
+        <select name="loc" id="vloc">
             <option value="Auckland" selected="selected">Auckland</option>
             <option value="Christchurch">Christchurch</option>
             <option value="Wellington">Wellington</option>
         </select>
 
         <label for="stu"><b>Studio</b></label>
-        <select name="stu" id="stu">
+        <select name="stu" id="vstu">
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

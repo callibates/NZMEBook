@@ -1176,14 +1176,26 @@ $(document).ready( function()
 	$(document).on('click', '.btn', function(){
 		var array = document.getElementById('oid').value.split(':');
 		console.log("Printy");
-		var loc = document.getElementById("loc").value;
-		var stu = document.getElementById("stu").value;
+		var loc = document.getElementById("cloc").value;
+		var stu = document.getElementById("cstu").value;
 		var note = document.getElementById("snotes").value;
 		var clientName = document.getElementById("cliname").value;
 		var contactName = document.getElementById("conname").value;
 		if(note == '')
 		{
 			note = document.getElementById("cnotes").value;
+		}
+		
+		if(loc == '' && stu == '')
+		{
+			loc = document.getElementById("sloc").value;
+			stu = document.getElementById("sstu").value;
+			
+			if(loc == '' && stu == '')
+			{
+				loc = document.getElementById("vloc").value;
+				stu = document.getElementById("vstu").value;
+			}
 		}
 
 		console.log("Studio:"+stu+" Location:"+loc+" note: "+note);//this is working
