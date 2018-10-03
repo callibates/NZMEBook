@@ -38,7 +38,7 @@
 </div>
 <div class="form-popup" id="myFormStudio">
     <form class="form-container">
-        <h1>Make A Studio Booking</h1>
+        <h1>Studio Booking</h1>
 
         <label for="usrnm"><i>Username</i></label>
         <input type="text" placeholder="Enter Username" name="usrnm" id="usrnm">
@@ -70,13 +70,13 @@
         <label for="notes"><i>Notes:</i></label>
         <input type="text" placeholder="Additional Notes..." name="notes" id="snotes">
 
-        <button type="submit" class="btn" >Make Studio Booking</button>
-        <button type="button" class="cancello" onclick="closeForm()">Close</button>
+        <button type="submit" class="btn" >Confirm</button>
+        <button type="button" class="cancello" onclick="closeForm()">Cancel</button>
     </form>
 </div>
 <div class="form-popup" id="myFormClient">
     <form class="form-container">
-        <h1>Make A Client Booking</h1>
+        <h1>Client Booking</h1>
 
         <label for="cliname"><i>Client Name</i></label>
         <input type="text" name="cliname" id="cliname">
@@ -111,13 +111,13 @@
         <label for="notes"><i>Notes:</i></label>
         <input type="text" placeholder="Additional Notes..." name="notes" id="cnotes">
 
-        <button type="submit" class="btn" >Make Client Booking</button>
-        <button type="button" class="cancello" onclick="closeForm()">Close</button>
+        <button type="submit" class="btn" >Confirm</button>
+        <button type="button" class="cancello" onclick="closeForm()">Cancel</button>
     </form>
 </div>
 <div class="form-popup" id="myFormVoice">
     <form class="form-container">
-        <h1>Make A Voice Booking</h1>
+        <h1>Voice Booking</h1>
 
         <label for="usrnm"><i>Username</i></label>
         <input type="text" placeholder="Enter Username" name="usrnm" id="usrnm">
@@ -161,8 +161,8 @@
             <option value="10">10</option>
         </select>
 
-        <button type="submit" class="btn" >Make Voice Booking</button>
-        <button type="button" class="cancello" onclick="closeForm()">Close</button>
+        <button type="submit" class="btn" >Confirm</button>
+        <button type="button" class="cancello" onclick="closeForm()">Cancel</button>
     </form>
 </div>
 <div class="form-popup" id="myForm0">
