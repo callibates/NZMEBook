@@ -17,7 +17,7 @@ if(isset($_SESSION['logged_in']))
 
 if(isset($_SESSION['logged_in']))
 {
-	echo '<b>Week ' . global_week_number . ' - ' . global_day_name . ' ' . date('jS F Y') . '</b>';
+	echo '<p> ' . global_day_name . ' ' . date('jS F Y') . '</p>';
 }
 
 ?>
