@@ -41,7 +41,7 @@
         <h1>Studio Booking</h1>
 
         <label for="usrnm"><i>Username</i></label>
-        <input type="text" placeholder="Enter Username" name="usrnm" id="usrnm">
+        <input type="text" placeholder="Enter Username" name="usrnm" id="susrnm">
 
         <input type="hidden" name="d" id="d">
 
@@ -120,7 +120,7 @@
         <h1>Voice Booking</h1>
 
         <label for="usrnm"><i>Username</i></label>
-        <input type="text" placeholder="Enter Username" name="usrnm" id="usrnm">
+        <input type="text" placeholder="Enter Username" name="usrnm" id="vusrnm">
 
         <input type="hidden" name="d" id="d">
 

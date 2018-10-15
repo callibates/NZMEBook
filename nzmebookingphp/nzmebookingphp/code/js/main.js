@@ -77,7 +77,7 @@ function showreservations(studionum)
 	}
 	page_load('reservation');
 	div_hide('#content_div');
-
+	
 	$.get('reservation.php', function(data)
 	{
 		$('#content_div').html(data);
@@ -97,7 +97,7 @@ function showAucklandreservations(studionum)
 	var studio = studionum;
 	page_load('reservation');
 	div_hide('#content_div');
-
+	
 	$.get('reservation.php', function(data)
 	{
 		$('#content_div').html(data);
@@ -108,14 +108,14 @@ function showAucklandreservations(studionum)
 			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
 			page_loaded();
 		});
-
+		
 		var obj = document.getElementById("location");
 		obj.value = "Auckland";
 
 		var obj2 = document.getElementById("studio");
 		obj2.value = studio;
 	});
-
+	
 
 
 
@@ -137,13 +137,13 @@ function showWellingtonreservations(studionum)
 			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
 			page_loaded();
 		});
-
+		
 		var obj = document.getElementById("location");
 		obj.value = "Wellington";
 
 		var obj2 = document.getElementById("studio");
 		obj2.value = studio;
-
+		
 	});
 }
 
@@ -163,13 +163,13 @@ function showchristchurchreservations(studionum)
 			$('#reservation_table_div').html(data).slideDown('slow', function() { setTimeout(function() { div_fadein('#reservation_table_div'); }, 250); });
 			page_loaded();
 		});
-
+		
 		var obj = document.getElementById("location");
 		obj.value = "Christchurch";
 
 		var obj2 = document.getElementById("studio");
 		obj2.value = studio;
-
+		
 	});
 }
 
@@ -591,7 +591,7 @@ function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note)
     }
 }
 
-function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note, clientName, contactName, NumScr, tag)
+function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note, clientName, contactName, NumScr, tag, username)
 {
 	console.log("Toggle reservation time is being triggered.");//this is working
     if(session_user_is_admin == '1')
@@ -615,7 +615,7 @@ function toggle_reservation_time(id, week, day, time, from, set, loc, stu, note,
     if(user_name == '')
     {
 		console.log("Time to make a booking!");
-        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu, note:note, clientName:clientName, contactName:contactName, NumScr:NumScr, tag:tag}, function(data)
+        $.post('reservation.php?make_reservation', { week: week, day: day, time: time, loc: loc, stu: stu, note:note, clientName:clientName, contactName:contactName, NumScr:NumScr, tag:tag, username:username}, function(data)
         {
             if(data == 1)
             {
@@ -1147,7 +1147,7 @@ $(document).ready( function()
 
     $(document).on('click', '.reservation_time_cell_div', function()
     {
-    	document.getElementById('usrnm').value = session_user_name;
+    	//document.getElementById('usrnm').value = session_user_name;
         var array = this.id.split(':'); //make all the fields into the form and have them passed in on click?
 		document.getElementById('d').value = array[2];
 		document.getElementById('t').value = array[3];
@@ -1176,9 +1176,11 @@ $(document).ready( function()
 	$(document).on('click', '.btn', function(){
 		var array = document.getElementById('oid').value.split(':');
 		console.log("Printy");
+		var isclient = true;
 		var loc = null;
 		var stu = null;
 		var tag = null;
+		var username = document.getElementById("susrnm").value;
 		var cloc = document.getElementById("cloc").value;
 		var cstu = document.getElementById("cstu").value;
 		var sloc = document.getElementById("sloc").value;
@@ -1192,14 +1194,37 @@ $(document).ready( function()
 		if(note == '')
 		{
 			note = document.getElementById("cnotes").value;
+			isclient = false;
 		}
-
+		
+		if(username == "")
+		{
+			username = document.getElementById("vusrnm").value;
+		}
+		
 		if(cloc==sloc && sloc == vloc &&cstu == sstu &&sstu == vstu)
 		{
-			loc = cloc;
-			stu = cstu;
-			tag = "ClientBooking";
-
+			
+			if(contactName != "" && clientName != "")
+			{
+				tag = "ClientBooking";
+				loc = cloc;
+				stu = cstu;
+			}
+			else if(note != "")
+			{
+				tag = "StudioBooking";
+				loc = sloc;
+				stu = sstu;
+				
+			}
+			else
+			{
+				tag = "VoiceBooking";
+				loc = vloc;
+				stu = vstu;
+			}
+			
 		}
 		else if(cloc==sloc && sloc == vloc &&cstu != sstu &&sstu == vstu)
 		{
@@ -1212,6 +1237,13 @@ $(document).ready( function()
 			loc = cloc;
 			stu = cstu;
 			tag = "ClientBooking";
+		}
+		else if(cloc!=sloc && sloc == vloc &&cstu == sstu &&sstu == vstu)
+		{
+			loc = cloc;
+			stu = cstu;
+			tag = "ClientBooking";
+
 		}
 		else if(cloc==vloc && sloc != vloc &&cstu == vstu &&sstu == vstu)
 		{
@@ -1249,11 +1281,11 @@ $(document).ready( function()
 			stu = vstu;
 			tag = "VoiceBooking";
 		}
-
+		
 
 		console.log("Studio:"+stu+" Location:"+loc+" note: "+note);//this is working
-
-		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName, NumScr, tag);
+		
+		toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName, NumScr, tag, username);
 		/*if(clientName == '' && contactName == '')
 		{
 			toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note);
