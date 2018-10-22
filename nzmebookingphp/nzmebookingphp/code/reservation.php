@@ -24,7 +24,9 @@ elseif(isset($_GET['delete_reservation']))
 	$week = mysql_real_escape_string($_POST['week']);
 	$day = mysql_real_escape_string($_POST['day']);
 	$time = mysql_real_escape_string($_POST['time']);
-	echo delete_reservation($week, $day, $time);
+	$location = mysql_real_escape_string($_POST['location']);
+	$studio = mysql_real_escape_string($_POST['studio']);
+	echo delete_reservation($week, $day, $time, $location, $studio);
 }
 elseif(isset($_GET['read_reservation']))
 {

@@ -183,6 +183,7 @@
         <button type="button" class="but clientb" id="clientb" >Client</button>
         <button type="button" class="but studiob" id="studiob">Studio</button>
         <button type="button" class="but voiceb" id="voiceb">Voice Actor</button>
+	<button type="button" class="delete" id="delete">Delete Booking</button>
         <button type="button" class="cancello" onclick="closeForm()">Cancel</button>
     </form>
 </div>

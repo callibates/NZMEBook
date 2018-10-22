@@ -660,3 +660,15 @@ hr.thick_hr
 .form-container .studiob {
 	background-color: coral;
 }
+
+.form-container .delete {
+	background-color: red;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom:10px;
+	margin-top: 40px;
+	opacity: 0.8;
+}

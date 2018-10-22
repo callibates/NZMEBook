@@ -27,6 +27,38 @@ function regionreservations()
 	}
 }
 
+/*function deletebooking()
+{
+	var array = document.getElementById('oid').value.split(':');
+
+	var week = array[1];
+	var day = array[2];
+	var time = array[3];
+	var location = document.getElementById('location').value;
+	var studio = document.getElementById('studio').value;
+	var id = 1;
+
+	$.post('reservation.php?delete_reservation', { week: week, day: day, time: time, location:location, studio:studio }, function(data)
+	{
+		if(data == 1)
+		{
+			setTimeout(function() { read_reservation(id, week, day, time, location, studio); }, 1000);
+			closeForm();
+			page_loaded();
+		}
+		else
+		{
+			notify(data, 4);
+			setTimeout(function() { read_reservation(id, week, day, time, location, studio); }, 2000);
+			closeForm();
+			page_loaded();
+		}
+		});
+		closeForm();
+		window.location.reload();
+		
+}*/
+
 function showlogin()
 {
 	page_load();
@@ -1294,6 +1326,35 @@ $(document).ready( function()
 			toggle_reservation_time(this, array[1], array[2], array[3], array[0], true, loc, stu, note, clientName, contactName);
 		}*/
 	});
+	$(document).on('click', '.delete', function(){
+		var array = document.getElementById('oid').value.split(':');
+
+		var week = array[1];
+		var day = array[2];
+		var time = array[3];
+		var location = document.getElementById('location').value;
+		var studio = document.getElementById('studio').value;
+		var id = this;
+
+		$.post('reservation.php?delete_reservation', { week: week, day: day, time: time, location:location, studio:studio }, function(data)
+		{
+			if(data == 1)
+			{
+				setTimeout(function() { read_reservation(id, week, day, time, location, studio); }, 1000);
+				closeForm();
+				page_loaded();
+			}
+			else
+			{
+				notify(data, 4);
+				setTimeout(function() { read_reservation(id, week, day, time, location, studio); }, 2000);
+				closeForm();
+				page_loaded();
+			}
+			});
+			closeForm();
+			window.location.reload();
+		});
 	$(document).on('click', '.cancello', function(){
 		closeAll();
 	});
