@@ -30,6 +30,7 @@ CREATE TABLE nzmebooking_reservations (
 		reservation_note VARCHAR(500),
 		reservation_NumScr INT(11),
 		reservation_tag VARCHAR(100),
+		reservation_username VARCHAR(100),
 		PRIMARY KEY (reservation_id)
 	)
 
