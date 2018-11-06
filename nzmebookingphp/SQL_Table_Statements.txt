@@ -1,0 +1,37 @@
+CREATE TABLE nzmebooking_users (
+		user_id INT(10) NOT NULL AUTO_INCREMENT,
+		user_is_admin TINYINT(1) NOT NULL,
+		user_is_soundengineer TINYINT(1) NOT NULL,
+		user_is_copywriter TINYINT(1) NOT NULL,
+		user_is_guest TINYINT(1) NOT NULL,
+		user_email VARCHAR(100) NOT NULL,
+		user_password VARCHAR(1000) NOT NULL,
+		user_name VARCHAR(100) NOT NULL,
+		user_role VARCHAR(100) NOT NULL,
+		user_reservation_reminder TINYINT(1) NOT NULL,
+		PRIMARY KEY (user_id)
+	)
+
+
+CREATE TABLE nzmebooking_reservations (
+		reservation_id INT(10) NOT NULL AUTO_INCREMENT,
+		reservation_made_time DATETIME NOT NULL,
+		reservation_year SMALLINT(4) NOT NULL,
+		reservation_week TINYINT(2) NOT NULL,
+		reservation_day TINYINT(1) NOT NULL,
+		reservation_time VARCHAR(100) COLLATE utf8_unicode_ci NOT NULL,
+		reservation_user_id INT(10) NOT NULL,
+		reservation_user_email VARCHAR(100) COLLATE utf8_unicode_ci NOT NULL,
+		reservation_user_name VARCHAR(100) COLLATE utf8_unicode_ci NOT NULL,
+		reservation_location VARCHAR(100) NOT NULL, 
+		reservation_studio VARCHAR(100) NOT NULL,
+		reservation_client_name VARCHAR(100),
+		reservation_contact_name VARCHAR(100),
+		reservation_note VARCHAR(500),
+		reservation_NumScr INT(11),
+		reservation_tag VARCHAR(100),
+		reservation_username VARCHAR(100),
+		PRIMARY KEY (reservation_id)
+	)
+
+

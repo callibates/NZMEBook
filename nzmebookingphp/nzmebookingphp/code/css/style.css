@@ -192,6 +192,7 @@ div#reservation_top_center_div
 {
 	display: table-cell;
 	text-align: center;
+	visibility: hidden;
 }
 
 div#reservation_top_right_div
@@ -645,7 +646,7 @@ hr.thick_hr
 	margin-bottom:10px;
 	margin-top: 40px;
 
-	
+
 	opacity: 0.8;
 }
 
