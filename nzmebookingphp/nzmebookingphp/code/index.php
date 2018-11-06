@@ -65,6 +65,7 @@
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
+            <option value="4">4</option>
         </select>
         <br><br>
         <label for="notes"><i>Notes:</i></label>
@@ -106,6 +107,7 @@
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
+            <option value="4">4</option>
         </select>
         <br><br>
         <label for="notes"><i>Notes:</i></label>
@@ -144,6 +146,7 @@
             <option value="1" selected="selected">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
+            <option value="4">4</option>
         </select>
         <br>
         <label for="scripts"><i># Scripts:</i></label>
